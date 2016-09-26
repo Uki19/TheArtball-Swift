@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="Home" id="BYZ-38-t0r" customClass="NewsMainViewController" customModule="TheArtball" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ikE-Xg-ChL">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Ei-xn-Etb">
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ocp-dE-ovz">
+                                        <color key="backgroundColor" red="0.043137254901960784" green="0.47058823529411764" blue="0.89411764705882346" alpha="1" colorSpace="calibratedRGB"/>
+                                        <segments>
+                                            <segment title="All"/>
+                                            <segment title="Comps"/>
+                                            <segment title="Videos"/>
+                                            <segment title="Other"/>
+                                        </segments>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="categorySegmentTapped:" destination="BYZ-38-t0r" eventType="valueChanged" id="diP-Gg-Qnm"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ocp-dE-ovz" firstAttribute="leading" secondItem="3Ei-xn-Etb" secondAttribute="leading" id="0TL-nV-zEX"/>
+                                    <constraint firstAttribute="bottom" secondItem="ocp-dE-ovz" secondAttribute="bottom" id="D17-sG-Chs"/>
+                                    <constraint firstItem="ocp-dE-ovz" firstAttribute="top" secondItem="3Ei-xn-Etb" secondAttribute="top" id="HvV-FJ-0q1"/>
+                                    <constraint firstItem="ocp-dE-ovz" firstAttribute="leading" secondItem="3Ei-xn-Etb" secondAttribute="leading" id="P1D-BI-wnF"/>
+                                    <constraint firstAttribute="trailing" secondItem="ocp-dE-ovz" secondAttribute="trailing" id="fBT-4B-5qU"/>
+                                    <constraint firstAttribute="trailing" secondItem="ocp-dE-ovz" secondAttribute="trailing" id="qQV-eB-oET"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="3Ei-xn-Etb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="9Xb-LD-Ifz"/>
+                            <constraint firstAttribute="trailing" secondItem="3Ei-xn-Etb" secondAttribute="trailing" id="HiV-WA-dgC"/>
+                            <constraint firstAttribute="trailing" secondItem="ikE-Xg-ChL" secondAttribute="trailing" id="R0K-bk-KwF"/>
+                            <constraint firstItem="3Ei-xn-Etb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="XTl-q1-Cop"/>
+                            <constraint firstItem="ikE-Xg-ChL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="caa-zM-cXE"/>
+                            <constraint firstItem="ikE-Xg-ChL" firstAttribute="top" secondItem="3Ei-xn-Etb" secondAttribute="bottom" id="emA-Wu-fcI"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ikE-Xg-ChL" secondAttribute="bottom" id="ian-Zp-nvz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Home" id="n2j-9g-E6y"/>
+                    <connections>
+                        <outlet property="categoriesSegmentedControl" destination="ocp-dE-ovz" id="iHL-zq-9aP"/>
+                        <outlet property="newsPagesHolderView" destination="ikE-Xg-ChL" id="jyA-bb-rYi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2128.8000000000002" y="-818.14092953523243"/>
+        </scene>
+        <!--News Page View Controller-->
+        <scene sceneID="UmV-Ij-TuB">
+            <objects>
+                <pageViewController storyboardIdentifier="NewsPageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="Lhu-B4-Dl7" customClass="NewsPageViewController" customModule="TheArtball" customModuleProvider="target" sceneMemberID="viewController">
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jc7-Bb-E9W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2129" y="-1565"/>
+        </scene>
+        <!--News Collection View Controller-->
+        <scene sceneID="MDE-gu-CMD">
+            <objects>
+                <collectionViewController storyboardIdentifier="NewsCollectionViewController" id="a1J-S5-7Ki" customClass="NewsCollectionViewController" customModule="TheArtball" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="ffL-ol-9gu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="GpY-8V-1IB">
+                            <size key="itemSize" width="140" height="140"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="newsCell" id="Pig-Ee-ayM" customClass="NewsCollectionViewCell" customModule="TheArtball" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="140" height="140"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="140" height="140"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ao8-VM-7OJ"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zjI-uX-K11">
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Ao8-VM-7OJ" secondAttribute="bottom" id="2gA-e9-IH4"/>
+                                    <constraint firstItem="zjI-uX-K11" firstAttribute="bottom" secondItem="Pig-Ee-ayM" secondAttribute="bottomMargin" id="AoT-df-a0K"/>
+                                    <constraint firstItem="Ao8-VM-7OJ" firstAttribute="leading" secondItem="Pig-Ee-ayM" secondAttribute="leading" id="BRJ-cp-pYk"/>
+                                    <constraint firstItem="Ao8-VM-7OJ" firstAttribute="top" secondItem="Pig-Ee-ayM" secondAttribute="top" id="Oeh-YQ-jG4"/>
+                                    <constraint firstItem="zjI-uX-K11" firstAttribute="leading" secondItem="Pig-Ee-ayM" secondAttribute="leadingMargin" id="dfK-8u-RaP"/>
+                                    <constraint firstItem="zjI-uX-K11" firstAttribute="trailing" secondItem="Pig-Ee-ayM" secondAttribute="trailingMargin" id="hc8-ll-3uG"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ao8-VM-7OJ" secondAttribute="trailing" id="xh8-Dm-wfh"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="newsItemImageView" destination="Ao8-VM-7OJ" id="ScI-EW-ddN"/>
+                                    <outlet property="newstitleLabel" destination="zjI-uX-K11" id="sYc-EM-BDZ"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="a1J-S5-7Ki" id="H7R-qE-ebx"/>
+                            <outlet property="delegate" destination="a1J-S5-7Ki" id="dSd-km-dEY"/>
+                        </connections>
+                    </collectionView>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vLT-yJ-bOT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2949.5999999999999" y="-1566.5667166416792"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="Xed-Ly-vVx">
+            <objects>
+                <navigationController storyboardIdentifier="UINavigationController-N5o-ER-Odf" title="Home" automaticallyAdjustsScrollViewInsets="NO" id="N5o-ER-Odf" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" id="5xS-aM-WU1"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gS8-Cd-Emv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="hm2-Yj-9hn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TVn-F4-jG4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1189.5999999999999" y="-818.14092953523243"/>
+        </scene>
+    </scenes>
+</document>
