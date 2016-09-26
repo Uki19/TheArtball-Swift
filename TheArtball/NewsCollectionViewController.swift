@@ -8,10 +8,12 @@
 
 import UIKit
 
-private let reuseIdentifier = "newsCell"
-
 class NewsCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
+    private let reuseIdentifier = "newsCell"
+    private let CELL_SPACING: CGFloat = 1.0
+    private let SECTION_INSETS: CGFloat = 1.0
+    
     var category: Category?
     var newsItems = [NewsItem]()
     
@@ -58,9 +60,19 @@ class NewsCollectionViewController: UICollectionViewController, UICollectionView
         return cell
     }
     
+    // MARK: UICollectionViewDelegateFlowLayout
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: self.view.frame.width/2, height: self.view.frame.width/2)
+        let cellWidth = self.view.frame.width/2 - CELL_SPACING - SECTION_INSETS
+        return CGSize(width: cellWidth, height: cellWidth)
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return CELL_SPACING
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: SECTION_INSETS, left: SECTION_INSETS, bottom: SECTION_INSETS, right: SECTION_INSETS)
+    }
     
 }

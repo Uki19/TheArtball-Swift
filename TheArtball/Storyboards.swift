@@ -13,6 +13,7 @@ enum Storyboards: String {
     case Main = "Main"
     case News = "News"
     case Article = "Articles"
+    case Base = "Base"
 }
 
 extension UIStoryboard {

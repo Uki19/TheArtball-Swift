@@ -9,34 +9,34 @@
 import Foundation
 
 enum Category: Int, Comparable {
-    case All = 0
-    case Competition = 1
-    case Video = 2
-    case Other = 3
+    case all = 0
+    case competition = 1
+    case video = 2
+    case other = 3
     
     func next() -> Category? {
         switch self {
-        case .All:
-            return .Competition
-        case .Competition:
-            return .Video
-        case .Video:
-            return .Other
-        case .Other:
+        case .all:
+            return .competition
+        case .competition:
+            return .video
+        case .video:
+            return .other
+        case .other:
             return nil
         }
     }
     
     func previous() -> Category? {
         switch self {
-        case .All:
+        case .all:
             return nil
-        case .Competition:
-            return .All
-        case .Video:
-            return .Competition
-        case .Other:
-            return .Video
+        case .competition:
+            return .all
+        case .video:
+            return .competition
+        case .other:
+            return .video
         }
     }
     

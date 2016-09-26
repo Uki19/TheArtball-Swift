@@ -21,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().backgroundColor = UIColor.artballColor
         UINavigationBar.appearance().barTintColor = UIColor.artballColor
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        UINavigationBar.appearance().shadowImage = UIImage()
     
         //UITabBar Style
         UITabBar.appearance().backgroundColor = UIColor.artballColor

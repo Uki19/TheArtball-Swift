@@ -30,8 +30,8 @@ class NewsPageViewController: UIPageViewController, UIPageViewControllerDataSour
         let allNewsViewController = UIStoryboard(storyboardType: .News)
             .instantiateViewController(withIdentifier: ViewControllerID.kNewsCollectionViewController)
             as? NewsCollectionViewController
-        allNewsViewController?.category = .All
-        pagesDict[.All] = allNewsViewController
+        allNewsViewController?.category = .all
+        pagesDict[.all] = allNewsViewController
         dataSource = self
         setViewControllers([allNewsViewController!], direction: .forward, animated: true, completion: nil)
     }

@@ -43,6 +43,12 @@ class NewsMainViewController: UIViewController, UIPageViewControllerDelegate {
     
     func setupSegmentedControl() {
         
+        categoriesSegmentedControl.setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.white], for: .normal)
+        categoriesSegmentedControl.setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.white], for: .selected)
+        categoriesSegmentedControl.tintColor = UIColor.clear
+        categoriesSegmentedControl.setBackgroundImage(#imageLiteral(resourceName: "segment-select"), for: .selected, barMetrics: .default)
+        categoriesSegmentedControl.setBackgroundImage(#imageLiteral(resourceName: "segmented-unselected"), for: .normal, barMetrics: .default)
+        
     }
     
     @IBAction func categorySegmentTapped(_ sender: UISegmentedControl) {
