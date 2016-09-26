@@ -1,6 +1,0 @@
-framework module Pods_TheArtballTests {
-  umbrella header "Pods-TheArtballTests-umbrella.h"
-
-  export *
-  module * { export * }
-}
