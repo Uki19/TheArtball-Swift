@@ -13,8 +13,11 @@ class ArticlesTableViewController: BaseTableViewController {
     private let reuseIdentifier = "articleCell"
     var articles = [Article]()
     
+    // MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        currentState = .loading
         getArticles()
         
     }
@@ -22,17 +25,21 @@ class ArticlesTableViewController: BaseTableViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
+    
+    override func refresh(sender: UIRefreshControl) {
+        getArticles()
+    }
+    
     // MARK: - API Methods
     
     func getArticles(){
         
         let articlesService = ArticlesService()
-        currentState = .loading
         articlesService.getAllArticles { (error, articles) in
             DispatchQueue.main.async {
                 self.articles = articles as! [Article]
                 self.tableView.reloadData()
+                self.myRefreshControl.endRefreshing()
                 self.currentState = .filled
             }
         }

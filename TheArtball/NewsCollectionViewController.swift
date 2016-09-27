@@ -17,8 +17,12 @@ class NewsCollectionViewController: BaseCollectionViewController, UICollectionVi
     var category: Category?
     var newsItems = [NewsItem]()
     
+    
+    // MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        currentState = .loading
         getNews()
     }
     
@@ -35,27 +39,37 @@ class NewsCollectionViewController: BaseCollectionViewController, UICollectionVi
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
     }
- 
+    
+    // MARK: - Refresh
+    
+    override func refresh(sender: UIRefreshControl) {
+        getNews()
+    }
+    
     // MARK: - API Methods
     
     func getNews() {
         let newsService = NewsService()
-        currentState = .loading
         newsService.getAllNews() { (error, responseData) in
             DispatchQueue.main.async {
-                self.newsItems = responseData as! [NewsItem]
-                self.collectionView?.reloadData()
-                if self.newsItems.count == 0 {
-                    self.currentState = .noContent
+                
+                if error == nil {
+                    self.newsItems = responseData as! [NewsItem]
+                    if self.newsItems.count == 0 {
+                        self.currentState = .noContent
+                    } else {
+                        self.currentState = .filled
+                    }
                 } else {
-                    self.currentState = .filled
+                    self.currentState = .error
                 }
+                self.refreshControl.endRefreshing()
+                self.collectionView?.reloadData()
             }
         }
 
     }
     
-
     // MARK: UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {

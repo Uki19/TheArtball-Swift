@@ -38,6 +38,25 @@ class BaseTableViewController: UITableViewController {
     }()
     
     var loadingBackgroundView = LoadingView()
+    var myRefreshControl: UIRefreshControl!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupRefreshControl()
+    }
+    
+    
+    func setupRefreshControl() {
+        myRefreshControl = UIRefreshControl()
+        myRefreshControl.addTarget(self, action: #selector(BaseTableViewController.refresh(sender:)), for: .valueChanged)
+        if #available(iOS 10.0, *) {
+            tableView.refreshControl = myRefreshControl
+        } else {
+            tableView.addSubview(myRefreshControl)
+        }
+    }
+    
+    func refresh(sender: UIRefreshControl) {}
     
     func customizeViewsForState(state: DataViewState) {
         

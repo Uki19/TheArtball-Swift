@@ -31,6 +31,24 @@ class BaseCollectionViewController: UICollectionViewController {
     }()
     
     var loadingBackgroundView = LoadingView()
+    var refreshControl: UIRefreshControl!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.setupRefreshControl()
+    }
+    
+    func setupRefreshControl() {
+        refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(BaseCollectionViewController.refresh(sender:)), for: .valueChanged)
+        if #available(iOS 10.0, *) {
+            collectionView?.refreshControl = refreshControl
+        } else {
+            collectionView?.addSubview(refreshControl)
+        }
+    }
+    
+    func refresh(sender: UIRefreshControl) {}
     
     func customizeViewsForState(state: DataViewState) {
         

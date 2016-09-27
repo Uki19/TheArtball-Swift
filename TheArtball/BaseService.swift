@@ -10,16 +10,17 @@ import Foundation
 
 typealias JSONObject = [String: Any]
 typealias JSONArray = Array<JSONObject>
+typealias ServiceCompletionClosure = (Error?, Any) -> Void
 
 struct BaseService {
     
-//    static let baseUrl = "https://kidsterapp.co"
-//    static let baseUrl = "https://jsonplaceholder.typicode.com"
+    //    static let baseUrl = "https://kidsterapp.co"
+    //    static let baseUrl = "https://jsonplaceholder.typicode.com"
     static let baseUrl = "http://www.filltext.com"
     
-    typealias CompletionClosure = (Error?, URLResponse, Any) -> Void
+    typealias BaseCompletionClosure = (Error?, HTTPURLResponse, Any) -> Void
     
-    static func get(resource: String, completionHandler: @escaping CompletionClosure) {
+    static func get(resource: String, completionHandler: @escaping BaseCompletionClosure) {
         
         let encodedUrl = (baseUrl + resource).addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
         
@@ -27,21 +28,26 @@ struct BaseService {
         
         let dataTask = SessionManager.defaultManager.session?.dataTask(with: url!) {
             (data, response, error) in
-            if let repsonseError = error, let urlResponse = response {
-                completionHandler(repsonseError, urlResponse, data)
-                return
-                
-            }
             
-            if let jsonData = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments), let urlResponse = response {
-                completionHandler(nil, urlResponse, jsonData)
+            if let response = response as? HTTPURLResponse {
+                
+                if let repsonseError = error {
+                    completionHandler(repsonseError, response, data)
+                    return
+                }
+                
+                if let jsonData = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) {
+                    completionHandler(nil, response, jsonData)
+                } else {
+                    completionHandler(nil, response, data)
+                }
             }
             
         }
         dataTask?.resume()
     }
     
-    static func post(resource: String, parameters: [String: String], completionHandler: @escaping CompletionClosure) {
+    static func post(resource: String, parameters: [String: String], completionHandler: @escaping BaseCompletionClosure) {
         
         let url = URL(string: baseUrl + resource)
         var httpRequest = URLRequest(url: url!)
@@ -52,16 +58,18 @@ struct BaseService {
         
         let dataTask = SessionManager.defaultManager.session?.dataTask(with: httpRequest) {
             (data, response, error) in
-            if let repsonseError = error, let urlResponse = response {
-                completionHandler(repsonseError, urlResponse, data)
-                return
-            }
             
-            if let jsonData = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments), let urlResponse = response {
-                completionHandler(nil, urlResponse, jsonData)
+            if let response = response as? HTTPURLResponse {
+                
+                if let repsonseError = error {
+                    completionHandler(repsonseError, response, data)
+                    return
+                }
+                
+                if let jsonData = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) {
+                    completionHandler(nil, response, jsonData)
+                }
             }
-
-            
             
         }
         dataTask?.resume()

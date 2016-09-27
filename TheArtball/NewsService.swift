@@ -10,9 +10,33 @@ import Foundation
 
 struct NewsService {
     
-    typealias CompletionClosure = (Error?, Any) -> Void
+    func getAllNews(completionHandler: @escaping ServiceCompletionClosure) {
+        
+        BaseService.get(resource: Resource.kNews) {(error, response, responseData) in
+            
+            if error != nil {
+                print(response.statusCode)
+                completionHandler(error, responseData)
+                return
+            }
+            switch response.statusCode {
+                
+            case HTTPStatusCode.kOK:
+                var newsItems = [NewsItem]()
+                if let responseData = responseData as? JSONArray {
+                    for responseObject in responseData {
+                        let newsItem = NewsItem(withDictionary: responseObject)
+                        newsItems.append(newsItem)
+                    }
+                }
+                completionHandler(nil, newsItems)
+            default:
+                completionHandler(NSError(domain: "test", code: 1, userInfo: nil), responseData)
+            }
+        }
+    }
     
-    func getAllNews(completionHandler: @escaping CompletionClosure) {
+    func getNews(forCategory: Category, completionHandler: @escaping ServiceCompletionClosure) {
         
         BaseService.get(resource: Resource.kNews) {(error, response, responseData) in
             
@@ -27,4 +51,5 @@ struct NewsService {
             completionHandler(error, newsItems)
         }
     }
+
 }
