@@ -19,6 +19,7 @@
 		751185B31D972938009436EE /* HTTPStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751185B21D972938009436EE /* HTTPStatusCode.swift */; };
 		751185B51D974887009436EE /* NewsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751185B41D974887009436EE /* NewsService.swift */; };
 		751185B71D974C39009436EE /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751185B61D974C39009436EE /* Resource.swift */; };
+		754A1FB61D99F58200BB23FF /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754A1FB51D99F58200BB23FF /* LoadingView.swift */; };
 		75B4C43E1D95EC7B005E500B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B4C43D1D95EC7B005E500B /* AppDelegate.swift */; };
 		75B4C4431D95EC7B005E500B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75B4C4411D95EC7B005E500B /* Main.storyboard */; };
 		75B4C4451D95EC7B005E500B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75B4C4441D95EC7B005E500B /* Assets.xcassets */; };
@@ -35,10 +36,10 @@
 		75B4C4801D95F5EE005E500B /* NewsMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B4C47F1D95F5EE005E500B /* NewsMainViewController.swift */; };
 		75EBEC101D99974300535B17 /* Base.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75EBEC0F1D99974300535B17 /* Base.storyboard */; };
 		75EBEC131D9998A800535B17 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EBEC121D9998A800535B17 /* BaseTableViewController.swift */; };
-		75EBEC151D99A02C00535B17 /* TableStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EBEC141D99A02C00535B17 /* TableStatusView.swift */; };
-		75EBEC171D99A05000535B17 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EBEC161D99A05000535B17 /* LoadingView.swift */; };
-		75EBEC1A1D99A48300535B17 /* TableStatusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75EBEC191D99A48200535B17 /* TableStatusView.xib */; };
+		75EBEC151D99A02C00535B17 /* StatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EBEC141D99A02C00535B17 /* StatusView.swift */; };
+		75EBEC1A1D99A48300535B17 /* StatusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75EBEC191D99A48200535B17 /* StatusView.xib */; };
 		75EBEC1C1D99AF4C00535B17 /* UIView+XIB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EBEC1B1D99AF4C00535B17 /* UIView+XIB.swift */; };
+		75EDAEB01D99D810009C76A7 /* BaseCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EDAEAF1D99D810009C76A7 /* BaseCollectionViewController.swift */; };
 		75FA68F11D982143000A737E /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FA68F01D982143000A737E /* Model.swift */; };
 		75FA68F41D98494F000A737E /* UIColor+CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FA68F31D98494F000A737E /* UIColor+CustomColors.swift */; };
 		75FA68F61D989DC3000A737E /* ViewControllerID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FA68F51D989DC3000A737E /* ViewControllerID.swift */; };
@@ -78,6 +79,7 @@
 		751185B21D972938009436EE /* HTTPStatusCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPStatusCode.swift; sourceTree = "<group>"; };
 		751185B41D974887009436EE /* NewsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsService.swift; sourceTree = "<group>"; };
 		751185B61D974C39009436EE /* Resource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
+		754A1FB51D99F58200BB23FF /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		75B4C43A1D95EC7B005E500B /* TheArtball.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheArtball.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75B4C43D1D95EC7B005E500B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75B4C4421D95EC7B005E500B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -100,10 +102,10 @@
 		75B4C47F1D95F5EE005E500B /* NewsMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsMainViewController.swift; sourceTree = "<group>"; };
 		75EBEC0F1D99974300535B17 /* Base.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Base.storyboard; sourceTree = "<group>"; };
 		75EBEC121D9998A800535B17 /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
-		75EBEC141D99A02C00535B17 /* TableStatusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableStatusView.swift; sourceTree = "<group>"; };
-		75EBEC161D99A05000535B17 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
-		75EBEC191D99A48200535B17 /* TableStatusView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableStatusView.xib; sourceTree = "<group>"; };
+		75EBEC141D99A02C00535B17 /* StatusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusView.swift; sourceTree = "<group>"; };
+		75EBEC191D99A48200535B17 /* StatusView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StatusView.xib; sourceTree = "<group>"; };
 		75EBEC1B1D99AF4C00535B17 /* UIView+XIB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+XIB.swift"; sourceTree = "<group>"; };
+		75EDAEAF1D99D810009C76A7 /* BaseCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewController.swift; sourceTree = "<group>"; };
 		75FA68F01D982143000A737E /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		75FA68F31D98494F000A737E /* UIColor+CustomColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+CustomColors.swift"; sourceTree = "<group>"; };
 		75FA68F51D989DC3000A737E /* ViewControllerID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerID.swift; sourceTree = "<group>"; };
@@ -312,6 +314,7 @@
 			isa = PBXGroup;
 			children = (
 				75EBEC121D9998A800535B17 /* BaseTableViewController.swift */,
+				75EDAEAF1D99D810009C76A7 /* BaseCollectionViewController.swift */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -322,8 +325,8 @@
 				75EBEC181D99A45700535B17 /* View XIBs */,
 				75B4C4771D95F3CA005E500B /* TableViewCells */,
 				75B4C4761D95F3C2005E500B /* CollectionViewCells */,
-				75EBEC141D99A02C00535B17 /* TableStatusView.swift */,
-				75EBEC161D99A05000535B17 /* LoadingView.swift */,
+				75EBEC141D99A02C00535B17 /* StatusView.swift */,
+				754A1FB51D99F58200BB23FF /* LoadingView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -331,7 +334,7 @@
 		75EBEC181D99A45700535B17 /* View XIBs */ = {
 			isa = PBXGroup;
 			children = (
-				75EBEC191D99A48200535B17 /* TableStatusView.xib */,
+				75EBEC191D99A48200535B17 /* StatusView.xib */,
 			);
 			name = "View XIBs";
 			sourceTree = "<group>";
@@ -473,7 +476,7 @@
 			files = (
 				75B4C4481D95EC7B005E500B /* LaunchScreen.storyboard in Resources */,
 				75EBEC101D99974300535B17 /* Base.storyboard in Resources */,
-				75EBEC1A1D99A48300535B17 /* TableStatusView.xib in Resources */,
+				75EBEC1A1D99A48300535B17 /* StatusView.xib in Resources */,
 				751185AB1D969908009436EE /* Articles.storyboard in Resources */,
 				75B4C4451D95EC7B005E500B /* Assets.xcassets in Resources */,
 				75B4C4431D95EC7B005E500B /* Main.storyboard in Resources */,
@@ -629,17 +632,19 @@
 				751185981D9681DC009436EE /* ArticlesTableViewController.swift in Sources */,
 				75B4C4801D95F5EE005E500B /* NewsMainViewController.swift in Sources */,
 				75EBEC131D9998A800535B17 /* BaseTableViewController.swift in Sources */,
+				75EDAEB01D99D810009C76A7 /* BaseCollectionViewController.swift in Sources */,
 				75B4C46D1D95ED49005E500B /* Article.swift in Sources */,
 				75B4C4731D95EDFB005E500B /* Category.swift in Sources */,
 				75B4C47C1D95F432005E500B /* NewsPageViewController.swift in Sources */,
 				751185B31D972938009436EE /* HTTPStatusCode.swift in Sources */,
 				751185B11D970654009436EE /* SessionManager.swift in Sources */,
 				75B4C47E1D95F581005E500B /* NewsCollectionViewCell.swift in Sources */,
+				754A1FB61D99F58200BB23FF /* LoadingView.swift in Sources */,
 				75EBEC1C1D99AF4C00535B17 /* UIView+XIB.swift in Sources */,
 				75FA68F11D982143000A737E /* Model.swift in Sources */,
 				751185AE1D96CE72009436EE /* BaseService.swift in Sources */,
 				751185B51D974887009436EE /* NewsService.swift in Sources */,
-				75EBEC151D99A02C00535B17 /* TableStatusView.swift in Sources */,
+				75EBEC151D99A02C00535B17 /* StatusView.swift in Sources */,
 				75B4C46F1D95ED55005E500B /* NewsItem.swift in Sources */,
 				75FA68F61D989DC3000A737E /* ViewControllerID.swift in Sources */,
 				75B4C47A1D95F412005E500B /* NewsCollectionViewController.swift in Sources */,
@@ -648,7 +653,6 @@
 				7511859A1D968261009436EE /* ArticlesTableViewCell.swift in Sources */,
 				751185B71D974C39009436EE /* Resource.swift in Sources */,
 				75FA68F41D98494F000A737E /* UIColor+CustomColors.swift in Sources */,
-				75EBEC171D99A05000535B17 /* LoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

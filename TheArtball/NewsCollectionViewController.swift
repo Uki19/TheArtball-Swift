@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewsCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+class NewsCollectionViewController: BaseCollectionViewController, UICollectionViewDelegateFlowLayout {
 
     private let reuseIdentifier = "newsCell"
     private let CELL_SPACING: CGFloat = 1.0
@@ -19,15 +19,17 @@ class NewsCollectionViewController: UICollectionViewController, UICollectionView
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.currentState = .loading
         let newsService = NewsService()
         newsService.getAllNews() { (error, responseData) in
             DispatchQueue.main.async {
-                self.newsItems = responseData as! [NewsItem]
-                self.collectionView?.reloadData()
+//                self.newsItems = responseData as! [NewsItem]
+//                self.collectionView?.reloadData()
+//                self.currentState = .filled
             }
         }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

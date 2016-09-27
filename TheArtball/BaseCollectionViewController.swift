@@ -1,25 +1,18 @@
 //
-//  BaseTableViewController.swift
+//  BaseCollectionViewController.swift
 //  TheArtball
 //
-//  Created by Uros Zivaljevic on 9/26/16.
+//  Created by Uros Zivaljevic on 9/27/16.
 //  Copyright © 2016 Uros Zivaljevic. All rights reserved.
 //
 
 import UIKit
 
-enum DataViewState {
-    case filled
-    case loading
-    case noContent
-    case error
-}
-
-class BaseTableViewController: UITableViewController {
+class BaseCollectionViewController: UICollectionViewController {
     
     var currentState: DataViewState = .loading {
-        didSet {
-            customizeViewsForState(state: currentState)
+        willSet {
+            customizeViewsForState(state: newValue)
         }
     }
     
@@ -35,19 +28,25 @@ class BaseTableViewController: UITableViewController {
         return statusView
     }()
     
+    var loadingBackgroundView = LoadingView()
+    
     func customizeViewsForState(state: DataViewState) {
+        
+//        loadingBackgroundView.stopLoading()
         
         switch state {
         case .filled:
-            tableView.backgroundView = nil
+            collectionView?.backgroundView = nil
+        case .loading:
+            collectionView?.backgroundView = loadingBackgroundView
+//            loadingBackgroundView.startLoading()
         case .noContent:
-            tableView.backgroundView = noContentBackgroundView
+            collectionView?.backgroundView = noContentBackgroundView
         case .error:
-            tableView.backgroundView = errorBackgroundView
-        default:
-            break
+            collectionView?.backgroundView = errorBackgroundView
         }
         
     }
-
+    
+    
 }

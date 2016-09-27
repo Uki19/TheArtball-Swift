@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TableStatusView: UIView {
+class StatusView: UIView {
 
     @IBOutlet weak var statusImageView: UIImageView!
     @IBOutlet weak var statusLabel: UILabel!
