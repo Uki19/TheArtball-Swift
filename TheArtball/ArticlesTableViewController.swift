@@ -10,25 +10,53 @@ import UIKit
 
 class ArticlesTableViewController: BaseTableViewController {
 
+    private let reuseIdentifier = "articleCell"
+    var articles = [Article]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        currentState = .error
+        getArticles()
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
 
+    // MARK: - API Methods
+    
+    func getArticles(){
+        
+        let articlesService = ArticlesService()
+        currentState = .loading
+        articlesService.getAllArticles { (error, articles) in
+            DispatchQueue.main.async {
+                self.articles = articles as! [Article]
+                self.tableView.reloadData()
+                self.currentState = .filled
+            }
+        }
+        
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return articles.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! ArticlesTableViewCell
+        let article = self.articles[indexPath.row]
+        
+        cell.configureCell(article: article)
+        
+        return cell
     }
 
 }

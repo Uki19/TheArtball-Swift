@@ -9,9 +9,10 @@
 import Foundation
 
 struct NewsItem: Model {
+    
     var id: Int
     var title: String
-    var newsContent: String
+    var body: String
 //    var category: Category?
 //    var date: String
     
@@ -19,7 +20,7 @@ struct NewsItem: Model {
         
         id = dictionary["id"] as! Int
         title = dictionary["title"] as! String
-        newsContent = dictionary["body"] as! String
+        body = dictionary["body"] as! String
 //        category = dictionary["category"]!
 //        date = dictionary["date"] as! String
 //        category = nil

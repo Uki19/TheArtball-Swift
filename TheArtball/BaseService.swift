@@ -14,13 +14,16 @@ typealias JSONArray = Array<JSONObject>
 struct BaseService {
     
 //    static let baseUrl = "https://kidsterapp.co"
-    static let baseUrl = "https://jsonplaceholder.typicode.com"
+//    static let baseUrl = "https://jsonplaceholder.typicode.com"
+    static let baseUrl = "http://www.filltext.com"
     
     typealias CompletionClosure = (Error?, URLResponse, Any) -> Void
     
     static func get(resource: String, completionHandler: @escaping CompletionClosure) {
         
-        let url = URL(string: baseUrl + resource)
+        let encodedUrl = (baseUrl + resource).addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        
+        let url = URL(string: encodedUrl!)
         
         let dataTask = SessionManager.defaultManager.session?.dataTask(with: url!) {
             (data, response, error) in

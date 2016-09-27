@@ -27,10 +27,10 @@
             </objects>
             <point key="canvasLocation" x="1189.5999999999999" y="138.98050974512745"/>
         </scene>
-        <!--Articles Table View Controller-->
+        <!--Articles-->
         <scene sceneID="ZJf-bC-XrK">
             <objects>
-                <tableViewController id="GQf-OI-tES" customClass="ArticlesTableViewController" customModule="TheArtball" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Articles" id="GQf-OI-tES" customClass="ArticlesTableViewController" customModule="TheArtball" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="78" sectionHeaderHeight="28" sectionFooterHeight="28" id="kZ4-xr-Bt9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -84,14 +84,9 @@
                             <outlet property="delegate" destination="GQf-OI-tES" id="0XF-VZ-hEC"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="78a-UA-pwG"/>
+                    <navigationItem key="navigationItem" title="Articles" id="78a-UA-pwG"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bpk-ve-vsj" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <view contentMode="scaleToFill" id="2Nw-iT-9QY">
-                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                </view>
             </objects>
             <point key="canvasLocation" x="2165.5999999999999" y="134.48275862068968"/>
         </scene>

@@ -8,11 +8,20 @@
 
 import Foundation
 
-struct Article {
+struct Article: Model {
     
+    var id: Int
     var title: String
-    var article: String
-    var date: String
+    var body: String
+//    var date: String
     var author: String
     
+    init(withDictionary dictionary: JSONObject) {
+        id = dictionary["id"] as! Int
+        title = dictionary["title"] as! String
+        body = dictionary["body"] as! String
+        author = dictionary["author"] as! String
+    }
+    
 }
+

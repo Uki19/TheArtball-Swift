@@ -19,12 +19,14 @@ class BaseCollectionViewController: UICollectionViewController {
     var errorBackgroundView: StatusView = {
         let statusView = UIView.loadViewFromXib(name:"StatusView") as! StatusView
         statusView.statusLabel.text = "An Error Occured, please try later"
+        statusView.statusImageView.image = #imageLiteral(resourceName: "warning")
         return statusView
     }()
     
     var noContentBackgroundView: StatusView = {
         let statusView = UIView.loadViewFromXib(name:"StatusView") as! StatusView
         statusView.statusLabel.text = "No Data"
+        statusView.statusImageView.image = #imageLiteral(resourceName: "empty")
         return statusView
     }()
     
@@ -32,14 +34,11 @@ class BaseCollectionViewController: UICollectionViewController {
     
     func customizeViewsForState(state: DataViewState) {
         
-//        loadingBackgroundView.stopLoading()
-        
         switch state {
         case .filled:
             collectionView?.backgroundView = nil
         case .loading:
             collectionView?.backgroundView = loadingBackgroundView
-//            loadingBackgroundView.startLoading()
         case .noContent:
             collectionView?.backgroundView = noContentBackgroundView
         case .error:

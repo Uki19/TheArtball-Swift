@@ -18,36 +18,41 @@ enum DataViewState {
 class BaseTableViewController: UITableViewController {
     
     var currentState: DataViewState = .loading {
-        didSet {
-            customizeViewsForState(state: currentState)
+        willSet {
+            customizeViewsForState(state: newValue)
         }
     }
     
     var errorBackgroundView: StatusView = {
         let statusView = UIView.loadViewFromXib(name:"StatusView") as! StatusView
         statusView.statusLabel.text = "An Error Occured, please try later"
+        statusView.statusImageView.image = #imageLiteral(resourceName: "warning")
         return statusView
     }()
     
     var noContentBackgroundView: StatusView = {
         let statusView = UIView.loadViewFromXib(name:"StatusView") as! StatusView
         statusView.statusLabel.text = "No Data"
+        statusView.statusImageView.image = #imageLiteral(resourceName: "empty")
         return statusView
     }()
+    
+    var loadingBackgroundView = LoadingView()
     
     func customizeViewsForState(state: DataViewState) {
         
         switch state {
         case .filled:
             tableView.backgroundView = nil
+        case .loading:
+            tableView.backgroundView = loadingBackgroundView
         case .noContent:
             tableView.backgroundView = noContentBackgroundView
         case .error:
             tableView.backgroundView = errorBackgroundView
-        default:
-            break
         }
         
     }
+    
 
 }

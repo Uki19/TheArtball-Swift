@@ -12,10 +12,10 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="segment-select" translatesAutoresizingMaskIntoConstraints="NO" id="HYt-k1-X4e"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="warning" translatesAutoresizingMaskIntoConstraints="NO" id="HYt-k1-X4e"/>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XPb-iC-qIB">
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.46666666666666667" green="0.46666666666666667" blue="0.46666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
@@ -23,9 +23,9 @@
             <constraints>
                 <constraint firstItem="HYt-k1-X4e" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="0VP-o7-Yw2"/>
                 <constraint firstItem="XPb-iC-qIB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" symbolic="YES" id="C2P-cF-AIt"/>
-                <constraint firstItem="HYt-k1-X4e" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Ses-Sn-VVJ"/>
                 <constraint firstAttribute="trailing" secondItem="XPb-iC-qIB" secondAttribute="trailing" constant="20" symbolic="YES" id="d8b-oE-qjk"/>
                 <constraint firstItem="XPb-iC-qIB" firstAttribute="top" secondItem="HYt-k1-X4e" secondAttribute="bottom" constant="8" symbolic="YES" id="gko-zw-BkE"/>
+                <constraint firstItem="HYt-k1-X4e" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="s62-NE-NKM"/>
                 <constraint firstItem="HYt-k1-X4e" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailingMargin" id="xBR-mv-bV8"/>
             </constraints>
             <connections>
@@ -36,6 +36,6 @@
         </view>
     </objects>
     <resources>
-        <image name="segment-select" width="289" height="172"/>
+        <image name="warning" width="128" height="128"/>
     </resources>
 </document>

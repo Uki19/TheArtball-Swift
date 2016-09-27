@@ -23,5 +23,11 @@ class ArticlesTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
         
     }
+    
+    func configureCell(article: Article) {
+        articleTitleLabel.text = article.title
+        articleAuthorLabel.text = article.author
+        articleImageView.sd_setImage(with: URL(string: "http://i212.photobucket.com/albums/cc87/PhotoJenny89/KopievonDSC00118.jpg")!)
+    }
 
 }

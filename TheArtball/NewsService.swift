@@ -17,8 +17,8 @@ struct NewsService {
         BaseService.get(resource: Resource.kNews) {(error, response, responseData) in
             
             var newsItems = [NewsItem]()
-            if let responseData2 = responseData as? JSONArray {
-                for responseObject in responseData2 {
+            if let responseData = responseData as? JSONArray {
+                for responseObject in responseData {
                     let newsItem = NewsItem(withDictionary: responseObject)
                     newsItems.append(newsItem)
                 }

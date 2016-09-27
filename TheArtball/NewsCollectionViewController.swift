@@ -19,28 +19,42 @@ class NewsCollectionViewController: BaseCollectionViewController, UICollectionVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.currentState = .loading
-        let newsService = NewsService()
-        newsService.getAllNews() { (error, responseData) in
-            DispatchQueue.main.async {
-//                self.newsItems = responseData as! [NewsItem]
-//                self.collectionView?.reloadData()
-//                self.currentState = .filled
-            }
-        }
+        getNews()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
 
-    
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
     }
  
+    // MARK: - API Methods
+    
+    func getNews() {
+        let newsService = NewsService()
+        currentState = .loading
+        newsService.getAllNews() { (error, responseData) in
+            DispatchQueue.main.async {
+                self.newsItems = responseData as! [NewsItem]
+                self.collectionView?.reloadData()
+                if self.newsItems.count == 0 {
+                    self.currentState = .noContent
+                } else {
+                    self.currentState = .filled
+                }
+            }
+        }
+
+    }
+    
 
     // MARK: UICollectionViewDataSource
 
