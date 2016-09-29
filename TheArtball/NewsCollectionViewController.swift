@@ -61,6 +61,7 @@ class NewsCollectionViewController: BaseCollectionViewController, UICollectionVi
                         self.currentState = .filled
                     }
                 } else {
+                    print(error?.localizedDescription)
                     self.currentState = .error
                 }
                 self.refreshControl.endRefreshing()

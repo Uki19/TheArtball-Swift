@@ -38,6 +38,13 @@ class BaseCollectionViewController: UICollectionViewController {
         self.setupRefreshControl()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if currentState == .loading {
+            self.loadingBackgroundView.startLoading()
+        }
+    }
+    
     func setupRefreshControl() {
         refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(BaseCollectionViewController.refresh(sender:)), for: .valueChanged)

@@ -13,14 +13,21 @@ struct Article: Model {
     var id: Int
     var title: String
     var body: String
-//    var date: String
+    //    var date: String
     var author: String
     
-    init(withDictionary dictionary: JSONObject) {
-        id = dictionary["id"] as! Int
-        title = dictionary["title"] as! String
-        body = dictionary["body"] as! String
-        author = dictionary["author"] as! String
+    init?(withDictionary dictionary: JSONObject) {
+        
+        guard let id = dictionary["id"] as? Int,
+            let title = dictionary["title"] as? String,
+            let body = dictionary["body"] as? String,
+            let author = dictionary["author"] as? String
+            else { return nil }
+        
+        self.id = id
+        self.title = title
+        self.body = body
+        self.author = author
     }
     
 }

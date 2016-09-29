@@ -10,7 +10,7 @@ import Foundation
 
 typealias JSONObject = [String: Any]
 typealias JSONArray = Array<JSONObject>
-typealias ServiceCompletionClosure = (Error?, Any) -> Void
+typealias ServiceCompletionClosure = (Error?, Any?) -> Void
 
 struct BaseService {
     

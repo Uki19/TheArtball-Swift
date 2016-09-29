@@ -44,6 +44,8 @@
 		75FA68F11D982143000A737E /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FA68F01D982143000A737E /* Model.swift */; };
 		75FA68F41D98494F000A737E /* UIColor+CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FA68F31D98494F000A737E /* UIColor+CustomColors.swift */; };
 		75FA68F61D989DC3000A737E /* ViewControllerID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FA68F51D989DC3000A737E /* ViewControllerID.swift */; };
+		75FCF0A91D9C6DB60078D701 /* ResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FCF0A81D9C6DB60078D701 /* ResponseError.swift */; };
+		75FCF0AC1D9C6EE10078D701 /* ErrorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FCF0AB1D9C6EE10078D701 /* ErrorHelper.swift */; };
 		ED151B2DA0AAF749558474C6 /* Pods_TheArtball.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D2948EB03E50FF6DEA0A40C /* Pods_TheArtball.framework */; };
 /* End PBXBuildFile section */
 
@@ -111,6 +113,8 @@
 		75FA68F01D982143000A737E /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		75FA68F31D98494F000A737E /* UIColor+CustomColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+CustomColors.swift"; sourceTree = "<group>"; };
 		75FA68F51D989DC3000A737E /* ViewControllerID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerID.swift; sourceTree = "<group>"; };
+		75FCF0A81D9C6DB60078D701 /* ResponseError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseError.swift; sourceTree = "<group>"; };
+		75FCF0AB1D9C6EE10078D701 /* ErrorHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorHelper.swift; sourceTree = "<group>"; };
 		7DB9D85ABBE135EDC49D106C /* Pods-TheArtballTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheArtballTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TheArtballTests/Pods-TheArtballTests.release.xcconfig"; sourceTree = "<group>"; };
 		A9D6D863DE029850EDE20D67 /* Pods-TheArtball.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheArtball.release.xcconfig"; path = "Pods/Target Support Files/Pods-TheArtball/Pods-TheArtball.release.xcconfig"; sourceTree = "<group>"; };
 		D5250548F61D984D325302C5 /* Pods_TheArtballTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheArtballTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -224,6 +228,7 @@
 		75B4C43C1D95EC7B005E500B /* TheArtball */ = {
 			isa = PBXGroup;
 			children = (
+				75FCF0AA1D9C6ED30078D701 /* Helpers */,
 				751185AF1D9705F8009436EE /* API */,
 				75FA68F21D984822000A737E /* Extensions */,
 				75EBEC111D99980900535B17 /* Views */,
@@ -265,6 +270,7 @@
 				75B4C4701D95ED5F005E500B /* Comment.swift */,
 				75B4C4721D95EDFB005E500B /* Category.swift */,
 				75FA68F01D982143000A737E /* Model.swift */,
+				75FCF0A81D9C6DB60078D701 /* ResponseError.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -349,6 +355,14 @@
 				75EBEC1B1D99AF4C00535B17 /* UIView+XIB.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		75FCF0AA1D9C6ED30078D701 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				75FCF0AB1D9C6EE10078D701 /* ErrorHelper.swift */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 		91ED512A240AC8D02CF56262 /* Frameworks */ = {
@@ -638,6 +652,7 @@
 				75EDAEB01D99D810009C76A7 /* BaseCollectionViewController.swift in Sources */,
 				75B4C46D1D95ED49005E500B /* Article.swift in Sources */,
 				75B4C4731D95EDFB005E500B /* Category.swift in Sources */,
+				75FCF0A91D9C6DB60078D701 /* ResponseError.swift in Sources */,
 				75B4C47C1D95F432005E500B /* NewsPageViewController.swift in Sources */,
 				75D15D871D9AAB4300205361 /* ArticlesService.swift in Sources */,
 				751185B31D972938009436EE /* HTTPStatusCode.swift in Sources */,
@@ -648,6 +663,7 @@
 				75FA68F11D982143000A737E /* Model.swift in Sources */,
 				751185AE1D96CE72009436EE /* BaseService.swift in Sources */,
 				751185B51D974887009436EE /* NewsService.swift in Sources */,
+				75FCF0AC1D9C6EE10078D701 /* ErrorHelper.swift in Sources */,
 				75EBEC151D99A02C00535B17 /* StatusView.swift in Sources */,
 				75B4C46F1D95ED55005E500B /* NewsItem.swift in Sources */,
 				75FA68F61D989DC3000A737E /* ViewControllerID.swift in Sources */,

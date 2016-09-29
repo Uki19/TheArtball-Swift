@@ -20,8 +20,9 @@ struct ArticlesService {
             var articles = [Article]()
             if let responseData = responseData as? JSONArray {
                 for responseArticle in responseData {
-                    let article = Article(withDictionary: responseArticle)
-                    articles.append(article)
+                    if let article = Article(withDictionary: responseArticle) {
+                        articles.append(article)
+                    }
                 }
             }
             completionHandler(error, articles)

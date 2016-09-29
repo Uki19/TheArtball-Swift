@@ -45,6 +45,12 @@ class BaseTableViewController: UITableViewController {
         setupRefreshControl()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if currentState == .loading {
+            self.loadingBackgroundView.startLoading()
+        }
+    }
     
     func setupRefreshControl() {
         myRefreshControl = UIRefreshControl()

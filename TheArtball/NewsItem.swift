@@ -16,11 +16,17 @@ struct NewsItem: Model {
 //    var category: Category?
 //    var date: String
     
-    init(withDictionary dictionary: JSONObject) {
+    init?(withDictionary dictionary: JSONObject) {
         
-        id = dictionary["id"] as! Int
-        title = dictionary["title"] as! String
-        body = dictionary["body"] as! String
+        guard let id = dictionary["id"] as? Int,
+            let title = dictionary["title"] as? String,
+            let body = dictionary["body"] as? String
+            else { return nil }
+        
+        self.id = id
+        self.title = title
+        self.body = body
+        
 //        category = dictionary["category"]!
 //        date = dictionary["date"] as! String
 //        category = nil

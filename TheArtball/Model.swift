@@ -8,8 +8,12 @@
 
 import Foundation
 
+enum JSONParsingError: Error {
+    case invalidParameters
+}
+
 protocol Model {
     
-    init(withDictionary dictionary: JSONObject)
+    init?(withDictionary dictionary: JSONObject)
     
 }

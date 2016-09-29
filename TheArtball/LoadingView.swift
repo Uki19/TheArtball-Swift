@@ -21,7 +21,6 @@ class LoadingView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         logoImageView.center = center
-        self.startLoading()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -30,13 +29,12 @@ class LoadingView: UIView {
     
     func startLoading() {
         UIView.animate(withDuration: 1.0, delay: 0, options: [.repeat, .autoreverse], animations: {
-            self.logoImageView.alpha = 0.5
+            self.logoImageView.alpha = abs(self.logoImageView.alpha - 1.0)
             }, completion: nil)
     }
 
     func stopLoading() {
         logoImageView.layer.removeAllAnimations()
-        logoImageView.alpha = 1.0
     }
     
 }

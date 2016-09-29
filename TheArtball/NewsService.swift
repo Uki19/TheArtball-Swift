@@ -23,15 +23,26 @@ struct NewsService {
                 
             case HTTPStatusCode.kOK:
                 var newsItems = [NewsItem]()
-                if let responseData = responseData as? JSONArray {
-                    for responseObject in responseData {
-                        let newsItem = NewsItem(withDictionary: responseObject)
+                
+                guard let responseDataJSON = responseData as? JSONArray else {
+//                    completionHandler(ErrorHelper.error(withResponse: response), responseData)
+                    return
+                }
+                
+                for responseObject in responseDataJSON {
+                    
+                    if let newsItem = NewsItem(withDictionary: responseObject) {
                         newsItems.append(newsItem)
+                    } else {
+//                        completionHandler(ErrorHelper.error(withResponse: response), responseData)
+                        return
                     }
                 }
                 completionHandler(nil, newsItems)
+                
             default:
-                completionHandler(NSError(domain: "test", code: 1, userInfo: nil), responseData)
+                completionHandler(ErrorHelper.error(withResponse: response, responseData: responseData), responseData)
+                
             }
         }
     }
@@ -43,8 +54,9 @@ struct NewsService {
             var newsItems = [NewsItem]()
             if let responseData = responseData as? JSONArray {
                 for responseObject in responseData {
-                    let newsItem = NewsItem(withDictionary: responseObject)
-                    newsItems.append(newsItem)
+                    if let newsItem = NewsItem(withDictionary: responseObject) {
+                        newsItems.append(newsItem)
+                    }
                 }
             }
             
