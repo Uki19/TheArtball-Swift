@@ -137,10 +137,10 @@
             </objects>
             <point key="canvasLocation" x="2949.5999999999999" y="-1566.5667166416792"/>
         </scene>
-        <!--View Controller-->
+        <!--News Details View Controller-->
         <scene sceneID="DiT-dW-O7r">
             <objects>
-                <viewController id="8GZ-aC-CBc" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="8GZ-aC-CBc" customClass="NewsDetailsViewController" customModule="TheArtball" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7UH-yJ-zma"/>
                         <viewControllerLayoutGuide type="bottom" id="3vF-9H-nFM"/>
@@ -151,55 +151,63 @@
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UI0-pR-9pf">
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="szz-Op-RQs">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vjc-hm-1iD">
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vjc-hm-1iD">
-                                                <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="segment-select" translatesAutoresizingMaskIntoConstraints="NO" id="oCM-tf-MxJ"/>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lUq-J6-qn3">
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                                <color key="backgroundColor" red="1" green="0.77621644300000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <constraints>
-                                                    <constraint firstItem="lUq-J6-qn3" firstAttribute="leading" secondItem="vjc-hm-1iD" secondAttribute="leadingMargin" id="C9l-tQ-Pw9"/>
-                                                    <constraint firstAttribute="height" constant="200" id="FKS-Ox-N8G"/>
-                                                    <constraint firstItem="oCM-tf-MxJ" firstAttribute="top" secondItem="vjc-hm-1iD" secondAttribute="top" id="OqI-tU-0Yd"/>
-                                                    <constraint firstAttribute="bottom" secondItem="oCM-tf-MxJ" secondAttribute="bottom" id="Rac-as-DsY"/>
-                                                    <constraint firstItem="lUq-J6-qn3" firstAttribute="bottom" secondItem="vjc-hm-1iD" secondAttribute="bottomMargin" id="jhv-E9-9hO"/>
-                                                    <constraint firstAttribute="trailing" secondItem="oCM-tf-MxJ" secondAttribute="trailing" id="q2F-PP-JBv"/>
-                                                    <constraint firstItem="lUq-J6-qn3" firstAttribute="trailing" secondItem="vjc-hm-1iD" secondAttribute="trailingMargin" id="qDD-Mk-Krh"/>
-                                                    <constraint firstItem="oCM-tf-MxJ" firstAttribute="leading" secondItem="vjc-hm-1iD" secondAttribute="leading" id="rbq-xa-X8W"/>
-                                                </constraints>
-                                            </view>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xwO-18-rYv">
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                            </textView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nebo" translatesAutoresizingMaskIntoConstraints="NO" id="oWK-5L-CEs"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lUq-J6-qn3">
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
-                                    </stackView>
+                                        <color key="backgroundColor" red="1" green="0.77621644300000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="oWK-5L-CEs" firstAttribute="top" secondItem="vjc-hm-1iD" secondAttribute="top" id="1Fq-4c-Ais"/>
+                                            <constraint firstAttribute="bottom" secondItem="lUq-J6-qn3" secondAttribute="bottom" constant="20" symbolic="YES" id="IaQ-Xz-mhV"/>
+                                            <constraint firstAttribute="bottom" secondItem="oWK-5L-CEs" secondAttribute="bottom" id="QzZ-3b-wHD"/>
+                                            <constraint firstAttribute="trailing" secondItem="lUq-J6-qn3" secondAttribute="trailing" constant="20" symbolic="YES" id="cPJ-Ic-3dX"/>
+                                            <constraint firstAttribute="height" constant="250" id="eEQ-a8-eLb"/>
+                                            <constraint firstAttribute="trailing" secondItem="oWK-5L-CEs" secondAttribute="trailing" id="fmX-pR-xVy"/>
+                                            <constraint firstItem="lUq-J6-qn3" firstAttribute="leading" secondItem="vjc-hm-1iD" secondAttribute="leading" constant="20" symbolic="YES" id="jxR-p3-kWw"/>
+                                            <constraint firstItem="oWK-5L-CEs" firstAttribute="leading" secondItem="vjc-hm-1iD" secondAttribute="leading" id="shd-RX-tSA"/>
+                                        </constraints>
+                                    </view>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xwO-18-rYv">
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="szz-Op-RQs" firstAttribute="top" secondItem="UI0-pR-9pf" secondAttribute="top" id="0I2-HJ-0Vb"/>
-                                    <constraint firstItem="szz-Op-RQs" firstAttribute="leading" secondItem="UI0-pR-9pf" secondAttribute="leading" id="5dG-87-3KG"/>
-                                    <constraint firstAttribute="bottom" secondItem="szz-Op-RQs" secondAttribute="bottom" id="9en-11-jw1"/>
-                                    <constraint firstItem="szz-Op-RQs" firstAttribute="width" secondItem="UI0-pR-9pf" secondAttribute="width" id="N5X-bq-PCc"/>
-                                    <constraint firstAttribute="trailing" secondItem="szz-Op-RQs" secondAttribute="trailing" id="lWT-s8-nmm"/>
+                                    <constraint firstItem="xwO-18-rYv" firstAttribute="leading" secondItem="UI0-pR-9pf" secondAttribute="leading" id="0XT-4R-7qc"/>
+                                    <constraint firstItem="xwO-18-rYv" firstAttribute="top" secondItem="vjc-hm-1iD" secondAttribute="bottom" id="4NK-kO-NXp"/>
+                                    <constraint firstItem="xwO-18-rYv" firstAttribute="top" secondItem="vjc-hm-1iD" secondAttribute="bottom" id="HJ9-O0-Odx"/>
+                                    <constraint firstAttribute="trailing" secondItem="vjc-hm-1iD" secondAttribute="trailing" id="HmG-lu-WDM"/>
+                                    <constraint firstItem="vjc-hm-1iD" firstAttribute="width" secondItem="xwO-18-rYv" secondAttribute="width" id="aO4-2g-x3D"/>
+                                    <constraint firstAttribute="trailing" secondItem="xwO-18-rYv" secondAttribute="trailing" id="ba4-ey-EcC"/>
+                                    <constraint firstItem="vjc-hm-1iD" firstAttribute="leading" secondItem="UI0-pR-9pf" secondAttribute="leading" id="lbT-g8-5Bw"/>
+                                    <constraint firstAttribute="bottom" secondItem="xwO-18-rYv" secondAttribute="bottom" id="te5-4i-MNt"/>
+                                    <constraint firstItem="vjc-hm-1iD" firstAttribute="top" secondItem="UI0-pR-9pf" secondAttribute="top" id="yyk-SS-xoz"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="UI0-pR-9pf" firstAttribute="top" secondItem="iRo-ie-feP" secondAttribute="top" id="3LJ-iN-Jss"/>
+                            <constraint firstItem="vjc-hm-1iD" firstAttribute="width" secondItem="iRo-ie-feP" secondAttribute="width" id="WOH-gz-iwh"/>
+                            <constraint firstItem="UI0-pR-9pf" firstAttribute="top" secondItem="7UH-yJ-zma" secondAttribute="bottom" id="Xbo-BT-eNg"/>
+                            <constraint firstItem="3vF-9H-nFM" firstAttribute="top" secondItem="UI0-pR-9pf" secondAttribute="bottom" id="dgT-BA-QNj"/>
                             <constraint firstItem="UI0-pR-9pf" firstAttribute="leading" secondItem="iRo-ie-feP" secondAttribute="leading" id="nXq-ai-qGn"/>
                             <constraint firstAttribute="trailing" secondItem="UI0-pR-9pf" secondAttribute="trailing" id="tlX-Li-G2Z"/>
-                            <constraint firstAttribute="bottom" secondItem="UI0-pR-9pf" secondAttribute="bottom" id="yMY-Ip-u9u"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="scrollView" destination="UI0-pR-9pf" id="kOa-KE-yc4"/>
+                        <outlet property="skyImage" destination="oWK-5L-CEs" id="Mue-3R-gpc"/>
+                        <outlet property="topView" destination="vjc-hm-1iD" id="qbA-TW-euH"/>
+                        <outlet property="topViewHeightConstraint" destination="eEQ-a8-eLb" id="ep4-Zi-Uuj"/>
+                        <outlet property="topViewTopSpaceConstraint" destination="yyk-SS-xoz" id="9Na-cx-Nkt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9FI-TJ-JsJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -227,6 +235,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="segment-select" width="289" height="172"/>
+        <image name="nebo" width="418" height="250"/>
     </resources>
 </document>
