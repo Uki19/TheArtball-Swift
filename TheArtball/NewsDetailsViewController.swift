@@ -7,26 +7,42 @@
 //
 
 import UIKit
+import DTCoreText
 
 class NewsDetailsViewController: UIViewController, UIScrollViewDelegate {
-
+    
     let HEADER_HEIGHT: CGFloat = 250.0
     
+    @IBOutlet weak var newsTextView: DTAttributedTextView! {
+        didSet {
+            newsTextView.isScrollEnabled = false
+        }
+    }
     @IBOutlet weak var topView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var skyImage: UIImageView!
+    @IBOutlet weak var newsImageView: UIImageView!
+    @IBOutlet weak var newsTitleLabel: UILabel!
+    
+    @IBOutlet weak var contentHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var topViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var topViewTopSpaceConstraint: NSLayoutConstraint!
+    
+    var newsItem: NewsItem!
+    
+    // MARK: Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         scrollView.delegate = self
-        // Do any additional setup after loading the view.
         
-    }
-
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
+        setupNewsData()
+        
+        let newsItemViewModel = NewsItemViewModel(newsItem: newsItem)
+        
+        newsTextView.attributedString = newsItemViewModel.attributedContent
+        newsTextView.layoutIfNeeded()
+        contentHeightConstraint.constant = newsTextView.contentSize.height
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -34,11 +50,18 @@ class NewsDetailsViewController: UIViewController, UIScrollViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-
+    // MARK: Setup functions
+    
+    func setupNewsData() {
+        newsImageView.sd_setImage(with: URL(string: newsItem.imageUrl)!)
+        newsTitleLabel.text = newsItem.title
+    }
+    
+    // MARK: ScrollViewDelegate
+    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
-        if scrollView.contentOffset.y < HEADER_HEIGHT {
-            print(scrollView.contentOffset.y)
+        if scrollView.contentOffset.y < 0 {
             topViewHeightConstraint.constant = HEADER_HEIGHT - scrollView.contentOffset.y
             topViewTopSpaceConstraint.constant = scrollView.contentOffset.y
         }

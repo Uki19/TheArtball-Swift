@@ -123,7 +123,7 @@
                                 <connections>
                                     <outlet property="newsItemImageView" destination="Ao8-VM-7OJ" id="ScI-EW-ddN"/>
                                     <outlet property="newstitleLabel" destination="zjI-uX-K11" id="sYc-EM-BDZ"/>
-                                    <segue destination="8GZ-aC-CBc" kind="show" id="eAy-B0-Ulu"/>
+                                    <segue destination="8GZ-aC-CBc" kind="show" identifier="kHomeToNewsDetailsSegue" id="GHO-Oe-0KW"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -151,62 +151,67 @@
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UI0-pR-9pf">
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vjc-hm-1iD">
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vjc-hm-1iD">
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nebo" translatesAutoresizingMaskIntoConstraints="NO" id="oWK-5L-CEs"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nebo" translatesAutoresizingMaskIntoConstraints="NO" id="oWK-5L-CEs"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="title-shadow-bg" translatesAutoresizingMaskIntoConstraints="NO" id="blp-K1-DpP"/>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lUq-J6-qn3">
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
+                                                <size key="shadowOffset" width="1" height="1"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" red="1" green="0.77621644300000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="oWK-5L-CEs" firstAttribute="top" secondItem="vjc-hm-1iD" secondAttribute="top" id="1Fq-4c-Ais"/>
+                                            <constraint firstItem="blp-K1-DpP" firstAttribute="top" secondItem="lUq-J6-qn3" secondAttribute="top" constant="-8" id="76K-yM-Fgy"/>
+                                            <constraint firstAttribute="trailing" secondItem="blp-K1-DpP" secondAttribute="trailing" id="CsF-e7-AMR"/>
                                             <constraint firstAttribute="bottom" secondItem="lUq-J6-qn3" secondAttribute="bottom" constant="20" symbolic="YES" id="IaQ-Xz-mhV"/>
                                             <constraint firstAttribute="bottom" secondItem="oWK-5L-CEs" secondAttribute="bottom" id="QzZ-3b-wHD"/>
                                             <constraint firstAttribute="trailing" secondItem="lUq-J6-qn3" secondAttribute="trailing" constant="20" symbolic="YES" id="cPJ-Ic-3dX"/>
                                             <constraint firstAttribute="height" constant="250" id="eEQ-a8-eLb"/>
                                             <constraint firstAttribute="trailing" secondItem="oWK-5L-CEs" secondAttribute="trailing" id="fmX-pR-xVy"/>
+                                            <constraint firstAttribute="bottom" secondItem="blp-K1-DpP" secondAttribute="bottom" id="h1a-BV-NZn"/>
                                             <constraint firstItem="lUq-J6-qn3" firstAttribute="leading" secondItem="vjc-hm-1iD" secondAttribute="leading" constant="20" symbolic="YES" id="jxR-p3-kWw"/>
+                                            <constraint firstItem="blp-K1-DpP" firstAttribute="leading" secondItem="vjc-hm-1iD" secondAttribute="leading" id="sLJ-fE-ytf"/>
                                             <constraint firstItem="oWK-5L-CEs" firstAttribute="leading" secondItem="vjc-hm-1iD" secondAttribute="leading" id="shd-RX-tSA"/>
                                         </constraints>
                                     </view>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xwO-18-rYv">
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e1o-6x-boV" customClass="DTAttributedTextView">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="389" id="Aq7-CR-nce"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="xwO-18-rYv" firstAttribute="leading" secondItem="UI0-pR-9pf" secondAttribute="leading" id="0XT-4R-7qc"/>
-                                    <constraint firstItem="xwO-18-rYv" firstAttribute="top" secondItem="vjc-hm-1iD" secondAttribute="bottom" id="4NK-kO-NXp"/>
-                                    <constraint firstItem="xwO-18-rYv" firstAttribute="top" secondItem="vjc-hm-1iD" secondAttribute="bottom" id="HJ9-O0-Odx"/>
-                                    <constraint firstAttribute="trailing" secondItem="vjc-hm-1iD" secondAttribute="trailing" id="HmG-lu-WDM"/>
-                                    <constraint firstItem="vjc-hm-1iD" firstAttribute="width" secondItem="xwO-18-rYv" secondAttribute="width" id="aO4-2g-x3D"/>
-                                    <constraint firstAttribute="trailing" secondItem="xwO-18-rYv" secondAttribute="trailing" id="ba4-ey-EcC"/>
+                                    <constraint firstItem="e1o-6x-boV" firstAttribute="leading" secondItem="UI0-pR-9pf" secondAttribute="leading" constant="8" id="Dcg-tA-eTf"/>
+                                    <constraint firstItem="e1o-6x-boV" firstAttribute="top" secondItem="vjc-hm-1iD" secondAttribute="bottom" constant="8" symbolic="YES" id="Q8e-O0-GOU"/>
+                                    <constraint firstAttribute="trailing" secondItem="vjc-hm-1iD" secondAttribute="trailing" id="QcY-HG-cGi"/>
                                     <constraint firstItem="vjc-hm-1iD" firstAttribute="leading" secondItem="UI0-pR-9pf" secondAttribute="leading" id="lbT-g8-5Bw"/>
-                                    <constraint firstAttribute="bottom" secondItem="xwO-18-rYv" secondAttribute="bottom" id="te5-4i-MNt"/>
-                                    <constraint firstItem="vjc-hm-1iD" firstAttribute="top" secondItem="UI0-pR-9pf" secondAttribute="top" id="yyk-SS-xoz"/>
+                                    <constraint firstItem="vjc-hm-1iD" firstAttribute="top" secondItem="UI0-pR-9pf" secondAttribute="top" id="nDG-Po-M7g"/>
+                                    <constraint firstAttribute="bottom" secondItem="e1o-6x-boV" secondAttribute="bottom" id="tcu-7q-XEd"/>
+                                    <constraint firstAttribute="trailing" secondItem="e1o-6x-boV" secondAttribute="trailing" constant="8" id="vak-u6-5uq"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="vjc-hm-1iD" firstAttribute="width" secondItem="iRo-ie-feP" secondAttribute="width" id="WOH-gz-iwh"/>
-                            <constraint firstItem="UI0-pR-9pf" firstAttribute="top" secondItem="7UH-yJ-zma" secondAttribute="bottom" id="Xbo-BT-eNg"/>
+                            <constraint firstItem="vjc-hm-1iD" firstAttribute="width" secondItem="iRo-ie-feP" secondAttribute="width" id="U23-PE-WpM"/>
                             <constraint firstItem="3vF-9H-nFM" firstAttribute="top" secondItem="UI0-pR-9pf" secondAttribute="bottom" id="dgT-BA-QNj"/>
                             <constraint firstItem="UI0-pR-9pf" firstAttribute="leading" secondItem="iRo-ie-feP" secondAttribute="leading" id="nXq-ai-qGn"/>
                             <constraint firstAttribute="trailing" secondItem="UI0-pR-9pf" secondAttribute="trailing" id="tlX-Li-G2Z"/>
+                            <constraint firstItem="UI0-pR-9pf" firstAttribute="top" secondItem="7UH-yJ-zma" secondAttribute="bottom" id="unq-WC-tlk"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="contentHeightConstraint" destination="Aq7-CR-nce" id="FEz-TC-g37"/>
+                        <outlet property="newsImageView" destination="oWK-5L-CEs" id="0qg-dN-uwQ"/>
+                        <outlet property="newsTextView" destination="e1o-6x-boV" id="yev-9v-Vr9"/>
+                        <outlet property="newsTitleLabel" destination="lUq-J6-qn3" id="Xhy-9V-az5"/>
                         <outlet property="scrollView" destination="UI0-pR-9pf" id="kOa-KE-yc4"/>
-                        <outlet property="skyImage" destination="oWK-5L-CEs" id="Mue-3R-gpc"/>
                         <outlet property="topView" destination="vjc-hm-1iD" id="qbA-TW-euH"/>
                         <outlet property="topViewHeightConstraint" destination="eEQ-a8-eLb" id="ep4-Zi-Uuj"/>
-                        <outlet property="topViewTopSpaceConstraint" destination="yyk-SS-xoz" id="9Na-cx-Nkt"/>
+                        <outlet property="topViewTopSpaceConstraint" destination="nDG-Po-M7g" id="Z0v-Lh-U4r"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9FI-TJ-JsJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -236,5 +241,6 @@
     </scenes>
     <resources>
         <image name="nebo" width="418" height="250"/>
+        <image name="title-shadow-bg" width="200" height="40"/>
     </resources>
 </document>

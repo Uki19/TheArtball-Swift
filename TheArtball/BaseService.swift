@@ -14,9 +14,8 @@ typealias ServiceCompletionClosure = (Error?, Any?) -> Void
 
 struct BaseService {
     
-    //    static let baseUrl = "https://kidsterapp.co"
-    //    static let baseUrl = "https://jsonplaceholder.typicode.com"
-    static let baseUrl = "http://www.filltext.com"
+//    static let baseUrl = "http://www.filltext.com"
+    static let baseUrl = "http://www.theartball.com/admin/iOS/"
     
     typealias BaseCompletionClosure = (Error?, HTTPURLResponse, Any) -> Void
     
@@ -30,6 +29,7 @@ struct BaseService {
             (data, response, error) in
             
             if let response = response as? HTTPURLResponse {
+                
                 
                 if let repsonseError = error {
                     completionHandler(repsonseError, response, data)

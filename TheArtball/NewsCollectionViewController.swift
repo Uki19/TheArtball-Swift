@@ -33,12 +33,6 @@ class NewsCollectionViewController: BaseCollectionViewController, UICollectionVi
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
-    // MARK: - Navigation
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-    }
     
     // MARK: - Refresh
     
@@ -70,6 +64,21 @@ class NewsCollectionViewController: BaseCollectionViewController, UICollectionVi
         }
 
     }
+    
+    // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "kHomeToNewsDetailsSegue" {
+            if let newsDetailsVC = segue.destination as? NewsDetailsViewController,
+                let senderCell = sender as? NewsCollectionViewCell {
+                let indexPath = collectionView?.indexPath(for: senderCell)
+                newsDetailsVC.newsItem = newsItems[indexPath!.row]
+            }
+        }
+        
+    }
+    
     
     // MARK: UICollectionViewDataSource
 

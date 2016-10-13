@@ -15,7 +15,6 @@ struct NewsService {
         BaseService.get(resource: Resource.kNews) {(error, response, responseData) in
             
             if error != nil {
-                print(response.statusCode)
                 completionHandler(error, responseData)
                 return
             }

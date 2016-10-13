@@ -10,25 +10,29 @@ import Foundation
 
 struct NewsItem: Model {
     
-    var id: Int
+    var id: String
     var title: String
     var body: String
-//    var category: Category?
-//    var date: String
+    var imageUrl: String
+    //    var category: Category?
+    var date: String
     
     init?(withDictionary dictionary: JSONObject) {
         
-        guard let id = dictionary["id"] as? Int,
+        guard let id = dictionary["id"] as? String,
             let title = dictionary["title"] as? String,
-            let body = dictionary["body"] as? String
+            let body = dictionary["content"] as? String,
+            let imageUrl = dictionary["image"] as? String,
+            let date = dictionary["date"] as? String
             else { return nil }
         
         self.id = id
         self.title = title
         self.body = body
-        
-//        category = dictionary["category"]!
-//        date = dictionary["date"] as! String
-//        category = nil
+        self.imageUrl = imageUrl
+        self.date = date
+        //        category = dictionary["category"]!
+        //        date = dictionary["date"] as! String
+        //        category = nil
     }
 }

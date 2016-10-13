@@ -6,6 +6,7 @@ use_frameworks!
 target 'TheArtball' do
 
 pod 'SDWebImage'
+pod 'DTCoreText'
 
 end
 

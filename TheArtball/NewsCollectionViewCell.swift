@@ -16,7 +16,7 @@ class NewsCollectionViewCell: UICollectionViewCell {
     
     func configureCell(newsItem: NewsItem) {
         newstitleLabel.text = newsItem.title
-        newsItemImageView.sd_setImage(with: URL(string: "http://i212.photobucket.com/albums/cc87/PhotoJenny89/KopievonDSC00118.jpg")!)
+        newsItemImageView.sd_setImage(with: URL(string: newsItem.imageUrl)!)
     }
     
 }
