@@ -95,7 +95,7 @@ class NewsCollectionViewController: BaseCollectionViewController, UICollectionVi
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! NewsCollectionViewCell
         
         let newsItem = newsItems[indexPath.row]
-        cell.configureCell(newsItem: newsItem)
+        cell.configureCell(newsItem: newsItem, indexPath: indexPath)
     
         return cell
     }
@@ -103,7 +103,14 @@ class NewsCollectionViewController: BaseCollectionViewController, UICollectionVi
     // MARK: UICollectionViewDelegateFlowLayout
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let cellWidth = self.view.frame.width/2 - CELL_SPACING - SECTION_INSETS
+        
+        let newsItem = newsItems[indexPath.row]
+        
+        var cellWidth = self.view.frame.width/2 - CELL_SPACING - SECTION_INSETS
+        
+        if newsItem.important || indexPath.row == 0 {
+            cellWidth = self.view.frame.width - CELL_SPACING - SECTION_INSETS
+        }
         return CGSize(width: cellWidth, height: cellWidth)
     }
     

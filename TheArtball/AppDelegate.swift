@@ -15,13 +15,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
-        //UINavigationBar Style
-        UINavigationBar.appearance().tintColor = UIColor.white
-        UINavigationBar.appearance().backgroundColor = UIColor.artballColor
-        UINavigationBar.appearance().barTintColor = UIColor.artballColor
-        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
-        UINavigationBar.appearance().shadowImage = UIImage()
     
         //UITabBar Style
         UITabBar.appearance().backgroundColor = UIColor.artballColor

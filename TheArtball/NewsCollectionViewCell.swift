@@ -14,9 +14,14 @@ class NewsCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var newstitleLabel: UILabel!
     @IBOutlet weak var newsItemImageView: UIImageView!
     
-    func configureCell(newsItem: NewsItem) {
+    func configureCell(newsItem: NewsItem, indexPath: IndexPath) {
         newstitleLabel.text = newsItem.title
         newsItemImageView.sd_setImage(with: URL(string: newsItem.imageUrl)!)
+        if newsItem.important || indexPath.row == 0 {
+            newstitleLabel.font = UIFont.systemFont(ofSize: 24.0)
+        } else {
+            newstitleLabel.font = UIFont.systemFont(ofSize: 15.0)
+        }
     }
     
 }

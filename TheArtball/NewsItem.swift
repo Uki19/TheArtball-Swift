@@ -16,6 +16,7 @@ struct NewsItem: Model {
     var imageUrl: String
     //    var category: Category?
     var date: String
+    var important: Bool
     
     init?(withDictionary dictionary: JSONObject) {
         
@@ -23,7 +24,8 @@ struct NewsItem: Model {
             let title = dictionary["title"] as? String,
             let body = dictionary["content"] as? String,
             let imageUrl = dictionary["image"] as? String,
-            let date = dictionary["date"] as? String
+            let date = dictionary["date"] as? String,
+            let important = dictionary["important"] as? String
             else { return nil }
         
         self.id = id
@@ -31,6 +33,7 @@ struct NewsItem: Model {
         self.body = body
         self.imageUrl = imageUrl
         self.date = date
+        self.important = (important == "1" ? true : false)
         //        category = dictionary["category"]!
         //        date = dictionary["date"] as! String
         //        category = nil

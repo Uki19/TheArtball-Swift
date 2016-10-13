@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vLM-0n-FUb">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vLM-0n-FUb">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -45,10 +44,10 @@
             </objects>
             <point key="canvasLocation" x="1190" y="1263"/>
         </scene>
-        <!--UINavigationController-N5o-ER-Odf-->
+        <!--News-->
         <scene sceneID="4Sw-8S-tqZ">
             <objects>
-                <viewControllerPlaceholder storyboardName="News" referencedIdentifier="UINavigationController-N5o-ER-Odf" id="ho8-l5-DbQ" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="News" id="ho8-l5-DbQ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="1f7-xF-I9o"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2uP-cm-Wjh" userLabel="First Responder" sceneMemberID="firstResponder"/>

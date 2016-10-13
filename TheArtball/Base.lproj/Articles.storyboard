@@ -10,7 +10,7 @@
         <!--Item-->
         <scene sceneID="T4C-xd-ji3">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iZV-Au-2yX" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iZV-Au-2yX" customClass="MainNavigationController" customModule="TheArtball" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="HCD-hX-jRt"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -19,6 +19,10 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="7zp-gr-7af">
+                        <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="GQf-OI-tES" kind="relationship" relationship="rootViewController" id="Yjv-a5-SGC"/>
                     </connections>
@@ -43,13 +47,13 @@
                                     <frame key="frameInset" width="375" height="89"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rj2-Tp-Jrr">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="Rj2-Tp-Jrr">
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="60" id="aFG-N1-4Ft"/>
                                                 <constraint firstAttribute="width" secondItem="Rj2-Tp-Jrr" secondAttribute="height" multiplier="1:1" id="wQK-Nl-WFo"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rCZ-9S-ptR">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rCZ-9S-ptR">
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -91,4 +95,7 @@
             <point key="canvasLocation" x="2165.5999999999999" y="134.48275862068968"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="placeholder" width="850" height="850"/>
+    </resources>
 </document>

@@ -20,7 +20,9 @@ struct NewsItemViewModel {
     
     private func buildAttributedContent(content: String) -> NSAttributedString? {
         
-        let contentData = content.data(using: .utf8)
+        let htmlTaggedString = HTMLTagsHelper.addHTMLTags(text: content)
+        
+        let contentData = htmlTaggedString.data(using: .utf8)
         
         let options: [String: Any] = [NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType,
                                       DTDefaultFontSize: 14.0,
