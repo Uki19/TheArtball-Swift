@@ -14,8 +14,8 @@ typealias ServiceCompletionClosure = (Error?, Any?) -> Void
 
 struct BaseService {
     
-//    static let baseUrl = "http://www.filltext.com"
-    static let baseUrl = "http://www.theartball.com/admin/iOS/"
+    static let baseUrl = "http://theartball.com/api/v2/"
+//    static let baseUrl = "http://www.theartball.com/admin/iOS/"
     
     typealias BaseCompletionClosure = (Error?, HTTPURLResponse, Any) -> Void
     

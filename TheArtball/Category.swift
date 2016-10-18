@@ -40,6 +40,19 @@ enum Category: Int, Comparable {
         }
     }
     
+    func getCategoryName() -> String {
+        switch self {
+        case .all:
+            return "All"
+        case .competition:
+            return "Competitions"
+        case .video:
+            return "Videos"
+        case .other:
+            return "Other"
+        }
+    }
+    
     static func < (leftCategory: Category, rightCategory: Category) -> Bool {
         return leftCategory.rawValue < rightCategory.rawValue
     }

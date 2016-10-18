@@ -15,6 +15,7 @@ struct SessionManager {
     static let defaultManager: SessionManager = {
         var instance = SessionManager()
         let configuration = URLSessionConfiguration.default
+        configuration.requestCachePolicy = .reloadIgnoringLocalCacheData
         let session = URLSession(configuration: configuration)
         instance.session = session
         return instance

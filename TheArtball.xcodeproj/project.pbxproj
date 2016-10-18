@@ -12,7 +12,7 @@
 		750453B51DAF01A10026A2EC /* NewsItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750453B41DAF01A10026A2EC /* NewsItemViewModel.swift */; };
 		751185981D9681DC009436EE /* ArticlesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751185971D9681DC009436EE /* ArticlesTableViewController.swift */; };
 		7511859A1D968261009436EE /* ArticlesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751185991D968261009436EE /* ArticlesTableViewCell.swift */; };
-		751185A01D968402009436EE /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7511859F1D968402009436EE /* Storyboards.swift */; };
+		751185A01D968402009436EE /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7511859F1D968402009436EE /* Storyboard.swift */; };
 		751185A81D9684CE009436EE /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 751185A61D9684CE009436EE /* News.storyboard */; };
 		751185AB1D969908009436EE /* Articles.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 751185A91D969908009436EE /* Articles.storyboard */; };
 		751185AE1D96CE72009436EE /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751185AD1D96CE71009436EE /* BaseService.swift */; };
@@ -21,8 +21,8 @@
 		751185B51D974887009436EE /* NewsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751185B41D974887009436EE /* NewsService.swift */; };
 		751185B71D974C39009436EE /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751185B61D974C39009436EE /* Resource.swift */; };
 		754A1FB61D99F58200BB23FF /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754A1FB51D99F58200BB23FF /* LoadingView.swift */; };
+		75620E611DB2898B00779994 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75620E601DB2898B00779994 /* VideoViewController.swift */; };
 		7581328E1DB02F2200D13330 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7581328D1DB02F2200D13330 /* MainNavigationController.swift */; };
-		758132901DB0391400D13330 /* HTMLTagsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7581328F1DB0391400D13330 /* HTMLTagsHelper.swift */; };
 		759A566C1D9ECD2D00972AA5 /* NewsDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759A566B1D9ECD2D00972AA5 /* NewsDetailsViewController.swift */; };
 		75B4C43E1D95EC7B005E500B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B4C43D1D95EC7B005E500B /* AppDelegate.swift */; };
 		75B4C4431D95EC7B005E500B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75B4C4411D95EC7B005E500B /* Main.storyboard */; };
@@ -79,7 +79,7 @@
 		750453B41DAF01A10026A2EC /* NewsItemViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsItemViewModel.swift; sourceTree = "<group>"; };
 		751185971D9681DC009436EE /* ArticlesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticlesTableViewController.swift; sourceTree = "<group>"; };
 		751185991D968261009436EE /* ArticlesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticlesTableViewCell.swift; sourceTree = "<group>"; };
-		7511859F1D968402009436EE /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
+		7511859F1D968402009436EE /* Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
 		751185A71D9684CE009436EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/News.storyboard; sourceTree = "<group>"; };
 		751185AA1D969908009436EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Articles.storyboard; sourceTree = "<group>"; };
 		751185AD1D96CE71009436EE /* BaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
@@ -88,8 +88,9 @@
 		751185B41D974887009436EE /* NewsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsService.swift; sourceTree = "<group>"; };
 		751185B61D974C39009436EE /* Resource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		754A1FB51D99F58200BB23FF /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		75620E601DB2898B00779994 /* VideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		7581328D1DB02F2200D13330 /* MainNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
-		7581328F1DB0391400D13330 /* HTMLTagsHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTMLTagsHelper.swift; sourceTree = "<group>"; };
+		7599C0821DB1382E006E457D /* TheArtball-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TheArtball-Bridging-Header.h"; sourceTree = "<group>"; };
 		759A566B1D9ECD2D00972AA5 /* NewsDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsDetailsViewController.swift; sourceTree = "<group>"; };
 		75B4C43A1D95EC7B005E500B /* TheArtball.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheArtball.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75B4C43D1D95EC7B005E500B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -185,7 +186,7 @@
 				751185A91D969908009436EE /* Articles.storyboard */,
 				751185A61D9684CE009436EE /* News.storyboard */,
 				75EBEC0F1D99974300535B17 /* Base.storyboard */,
-				7511859F1D968402009436EE /* Storyboards.swift */,
+				7511859F1D968402009436EE /* Storyboard.swift */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -214,6 +215,7 @@
 		75B4C4311D95EC7A005E500B = {
 			isa = PBXGroup;
 			children = (
+				7599C0821DB1382E006E457D /* TheArtball-Bridging-Header.h */,
 				75B4C43C1D95EC7B005E500B /* TheArtball */,
 				75B4C4511D95EC7B005E500B /* TheArtballTests */,
 				75B4C45C1D95EC7B005E500B /* TheArtballUITests */,
@@ -325,6 +327,7 @@
 				75B4C47B1D95F432005E500B /* NewsPageViewController.swift */,
 				75B4C47F1D95F5EE005E500B /* NewsMainViewController.swift */,
 				759A566B1D9ECD2D00972AA5 /* NewsDetailsViewController.swift */,
+				75620E601DB2898B00779994 /* VideoViewController.swift */,
 			);
 			name = News;
 			sourceTree = "<group>";
@@ -372,7 +375,6 @@
 			isa = PBXGroup;
 			children = (
 				75FCF0AB1D9C6EE10078D701 /* ErrorHelper.swift */,
-				7581328F1DB0391400D13330 /* HTMLTagsHelper.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -464,6 +466,7 @@
 					75B4C4391D95EC7A005E500B = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = XBDB99CNZ7;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					75B4C44D1D95EC7B005E500B = {
@@ -657,7 +660,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				751185A01D968402009436EE /* Storyboards.swift in Sources */,
+				751185A01D968402009436EE /* Storyboard.swift in Sources */,
 				751185981D9681DC009436EE /* ArticlesTableViewController.swift in Sources */,
 				75B4C4801D95F5EE005E500B /* NewsMainViewController.swift in Sources */,
 				75EBEC131D9998A800535B17 /* BaseTableViewController.swift in Sources */,
@@ -674,9 +677,9 @@
 				75EBEC1C1D99AF4C00535B17 /* UIView+XIB.swift in Sources */,
 				75FA68F11D982143000A737E /* Model.swift in Sources */,
 				750453B51DAF01A10026A2EC /* NewsItemViewModel.swift in Sources */,
+				75620E611DB2898B00779994 /* VideoViewController.swift in Sources */,
 				751185AE1D96CE72009436EE /* BaseService.swift in Sources */,
 				751185B51D974887009436EE /* NewsService.swift in Sources */,
-				758132901DB0391400D13330 /* HTMLTagsHelper.swift in Sources */,
 				7581328E1DB02F2200D13330 /* MainNavigationController.swift in Sources */,
 				75FCF0AC1D9C6EE10078D701 /* ErrorHelper.swift in Sources */,
 				75EBEC151D99A02C00535B17 /* StatusView.swift in Sources */,
@@ -859,13 +862,17 @@
 			baseConfigurationReference = 07E396C245B9A606EC8A3DDA /* Pods-TheArtball.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = XBDB99CNZ7;
 				INFOPLIST_FILE = TheArtball/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.UrosZivaljevic.TheArtball;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TheArtball-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
+				USER_HEADER_SEARCH_PATHS = "Pods/**";
 			};
 			name = Debug;
 		};
@@ -874,13 +881,16 @@
 			baseConfigurationReference = A9D6D863DE029850EDE20D67 /* Pods-TheArtball.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = XBDB99CNZ7;
 				INFOPLIST_FILE = TheArtball/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.UrosZivaljevic.TheArtball;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TheArtball-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
+				USER_HEADER_SEARCH_PATHS = "Pods/**";
 			};
 			name = Release;
 		};

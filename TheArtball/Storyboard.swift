@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-enum Storyboards: String {
+enum Storyboard: String {
     case Main = "Main"
     case News = "News"
     case Article = "Articles"
@@ -18,7 +18,7 @@ enum Storyboards: String {
 
 extension UIStoryboard {
     
-    convenience init(storyboardType: Storyboards) {
+    convenience init(storyboardType: Storyboard) {
         self.init(name: storyboardType.rawValue, bundle: nil)
     }
 }

@@ -100,6 +100,18 @@ class NewsCollectionViewController: BaseCollectionViewController, UICollectionVi
         return cell
     }
     
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let cell = collectionView.cellForItem(at: indexPath)
+        let newsItem = newsItems[indexPath.row]
+        
+        if newsItem.category == "Videos" {
+            performSegue(withIdentifier: "kHomeToVideoSegue", sender: cell)
+        } else {
+            performSegue(withIdentifier: "kHomeToNewsDetailsSegue", sender: cell)
+        }
+    }
+    
     // MARK: UICollectionViewDelegateFlowLayout
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="N5o-ER-Odf">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -128,7 +129,6 @@
                                 <connections>
                                     <outlet property="newsItemImageView" destination="Ao8-VM-7OJ" id="ScI-EW-ddN"/>
                                     <outlet property="newstitleLabel" destination="zjI-uX-K11" id="sYc-EM-BDZ"/>
-                                    <segue destination="8GZ-aC-CBc" kind="show" identifier="kHomeToNewsDetailsSegue" id="GHO-Oe-0KW"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -137,6 +137,10 @@
                             <outlet property="delegate" destination="a1J-S5-7Ki" id="dSd-km-dEY"/>
                         </connections>
                     </collectionView>
+                    <connections>
+                        <segue destination="dMi-e9-wbj" kind="presentation" identifier="kHomeToVideoSegue" id="Ogh-6T-74t"/>
+                        <segue destination="8GZ-aC-CBc" kind="show" identifier="kHomeToNewsDetailsSegue" id="8Ze-Ze-0Do"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vLT-yJ-bOT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -223,6 +227,50 @@
             </objects>
             <point key="canvasLocation" x="4077.5999999999999" y="-827.13643178410803"/>
         </scene>
+        <!--Video View Controller-->
+        <scene sceneID="ate-Hj-hUJ">
+            <objects>
+                <viewController storyboardIdentifier="VideoViewController" id="dMi-e9-wbj" customClass="VideoViewController" customModule="TheArtball" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cms-EV-cRa"/>
+                        <viewControllerLayoutGuide type="bottom" id="q8J-Nf-3WB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aSX-Ki-KC7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JAW-IH-bWa" customClass="YTPlayerView">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="JAW-IH-bWa" secondAttribute="height" multiplier="1:1" id="ESN-Lm-Z73"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="orh-aN-nF8">
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" image="cancel"/>
+                                <connections>
+                                    <action selector="closeButtonPressed:" destination="dMi-e9-wbj" eventType="touchUpInside" id="nUb-5f-wkb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JAW-IH-bWa" firstAttribute="centerX" secondItem="aSX-Ki-KC7" secondAttribute="centerX" id="7mf-vF-Elj"/>
+                            <constraint firstAttribute="trailing" secondItem="JAW-IH-bWa" secondAttribute="trailing" id="BZz-BR-NvA"/>
+                            <constraint firstItem="JAW-IH-bWa" firstAttribute="leading" secondItem="aSX-Ki-KC7" secondAttribute="leading" id="XYl-Ut-4a6"/>
+                            <constraint firstItem="JAW-IH-bWa" firstAttribute="centerY" secondItem="aSX-Ki-KC7" secondAttribute="centerY" id="eS7-F4-DTB"/>
+                            <constraint firstItem="orh-aN-nF8" firstAttribute="top" secondItem="cms-EV-cRa" secondAttribute="bottom" constant="8" symbolic="YES" id="kcz-4W-RLz"/>
+                            <constraint firstItem="orh-aN-nF8" firstAttribute="leading" secondItem="aSX-Ki-KC7" secondAttribute="leading" constant="20" symbolic="YES" id="xmR-ad-cMb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="videoView" destination="JAW-IH-bWa" id="Tr4-oS-Lvv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v8m-fr-2sw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4924" y="-818.14092953523243"/>
+        </scene>
         <!--Home-->
         <scene sceneID="Xed-Ly-vVx">
             <objects>
@@ -245,6 +293,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="cancel" width="32" height="32"/>
         <image name="placeholder" width="850" height="850"/>
         <image name="title-shadow-bg" width="200" height="40"/>
     </resources>
