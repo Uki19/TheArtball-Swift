@@ -41,8 +41,7 @@ class NewsDetailsViewController: UIViewController, UIScrollViewDelegate, DTAttri
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupNewsData()
-        
+        setupNewsData()   
     }
     
     override func didReceiveMemoryWarning() {

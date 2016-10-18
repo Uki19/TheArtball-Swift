@@ -16,7 +16,7 @@ class NewsCollectionViewCell: UICollectionViewCell {
     
     func configureCell(newsItem: NewsItem, indexPath: IndexPath) {
         newstitleLabel.text = newsItem.title
-        newsItemImageView.sd_setImage(with: URL(string: newsItem.imageUrl)!)
+        newsItemImageView.sd_setImage(with: URL(string: newsItem.imageUrl)!, placeholderImage: #imageLiteral(resourceName: "placeholder"))
         if newsItem.important || indexPath.row == 0 {
             newstitleLabel.font = UIFont.systemFont(ofSize: 24.0)
         } else {

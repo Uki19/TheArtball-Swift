@@ -27,7 +27,7 @@ class ArticlesTableViewCell: UITableViewCell {
     func configureCell(article: Article) {
         articleTitleLabel.text = article.title
         articleAuthorLabel.text = article.author
-        articleImageView.sd_setImage(with: URL(string: article.imageUrl)!)
+        articleImageView.sd_setImage(with: URL(string: article.imageUrl)!, placeholderImage: #imageLiteral(resourceName: "placeholder"))
     }
 
 }
