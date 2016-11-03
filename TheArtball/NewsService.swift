@@ -46,9 +46,11 @@ struct NewsService {
         }
     }
     
-    func getNews(forCategory: Category, completionHandler: @escaping ServiceCompletionClosure) {
+    func getNews(forCategory category: Category, completionHandler: @escaping ServiceCompletionClosure) {
         
-        BaseService.get(resource: Resource.kNews) {(error, response, responseData) in
+        let resource = "\(Resource.kNews)?category=\(category.rawValue)"
+        
+        BaseService.get(resource: resource) {(error, response, responseData) in
             
             var newsItems = [NewsItem]()
             if let responseData = responseData as? JSONArray {

@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="N5o-ER-Odf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="N5o-ER-Odf">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -20,11 +23,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ikE-Xg-ChL">
+                                <rect key="frame" x="0.0" y="92" width="375" height="526"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Ei-xn-Etb">
+                                <rect key="frame" x="0.0" y="64" width="375" height="28"/>
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ocp-dE-ovz">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="29"/>
                                         <color key="backgroundColor" red="0.043137254901960784" green="0.47058823529411764" blue="0.89411764705882346" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="28" id="f2v-MB-OhS"/>
@@ -104,9 +110,14 @@
                                     <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="Ao8-VM-7OJ"/>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="title-shadow-bg" translatesAutoresizingMaskIntoConstraints="NO" id="oh1-uI-fES"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="Ao8-VM-7OJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="title-shadow-bg" translatesAutoresizingMaskIntoConstraints="NO" id="oh1-uI-fES">
+                                            <rect key="frame" x="0.0" y="110" width="150" height="40"/>
+                                        </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zjI-uX-K11">
+                                            <rect key="frame" x="8" y="118" width="134" height="24"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -146,7 +157,7 @@
             </objects>
             <point key="canvasLocation" x="2949.5999999999999" y="-1566.5667166416792"/>
         </scene>
-        <!--News Details View Controller-->
+        <!--Title-->
         <scene sceneID="DiT-dW-O7r">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="8GZ-aC-CBc" customClass="NewsDetailsViewController" customModule="TheArtball" customModuleProvider="target" sceneMemberID="viewController">
@@ -159,12 +170,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UI0-pR-9pf">
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
                                 <subviews>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vjc-hm-1iD">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="oWK-5L-CEs"/>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="title-shadow-bg" translatesAutoresizingMaskIntoConstraints="NO" id="blp-K1-DpP"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="oWK-5L-CEs">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="title-shadow-bg" translatesAutoresizingMaskIntoConstraints="NO" id="blp-K1-DpP">
+                                                <rect key="frame" x="0.0" y="193" width="375" height="57"/>
+                                            </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lUq-J6-qn3">
+                                                <rect key="frame" x="20" y="201" width="335" height="29"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
@@ -187,6 +205,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e1o-6x-boV" customClass="DTAttributedTextView">
+                                        <rect key="frame" x="8" y="258" width="359" height="389"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="389" id="Aq7-CR-nce"/>
                                         </constraints>
@@ -212,6 +231,16 @@
                             <constraint firstAttribute="trailing" secondItem="UI0-pR-9pf" secondAttribute="trailing" id="tlX-Li-G2Z"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Title" id="BdC-H2-kzT">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="95u-dI-Hjn">
+                            <connections>
+                                <action selector="commentsBarButtonPressed:" destination="8GZ-aC-CBc" id="aPl-mp-tlb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="contentHeightConstraint" destination="Aq7-CR-nce" id="FEz-TC-g37"/>
                         <outlet property="newsImageView" destination="oWK-5L-CEs" id="0qg-dN-uwQ"/>
@@ -221,6 +250,7 @@
                         <outlet property="topView" destination="vjc-hm-1iD" id="qbA-TW-euH"/>
                         <outlet property="topViewHeightConstraint" destination="eEQ-a8-eLb" id="ep4-Zi-Uuj"/>
                         <outlet property="topViewTopSpaceConstraint" destination="nDG-Po-M7g" id="Z0v-Lh-U4r"/>
+                        <segue destination="HoH-Ji-Qkv" kind="show" identifier="kNewsDetailsToComments" id="QgW-Gx-dAA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9FI-TJ-JsJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -240,12 +270,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JAW-IH-bWa" customClass="YTPlayerView">
+                                <rect key="frame" x="0.0" y="146" width="375" height="375"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="JAW-IH-bWa" secondAttribute="height" multiplier="1:1" id="ESN-Lm-Z73"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="orh-aN-nF8">
+                                <rect key="frame" x="20" y="28" width="20" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" image="cancel"/>
                                 <connections>
@@ -291,9 +323,17 @@
             </objects>
             <point key="canvasLocation" x="1189.5999999999999" y="-818.14092953523243"/>
         </scene>
+        <!--CommentsViewController-->
+        <scene sceneID="rgk-Rq-lF6">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="CommentsViewController" storyboardName="Comments" referencedIdentifier="CommentsViewController" id="HoH-Ji-Qkv" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="scF-Mt-113" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4038" y="-262"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="cancel" width="32" height="32"/>
+        <image name="cancel" width="20" height="20"/>
         <image name="placeholder" width="850" height="850"/>
         <image name="title-shadow-bg" width="200" height="40"/>
     </resources>

@@ -14,9 +14,9 @@ struct NewsItem: Model {
     var title: String
     var body: String
     var imageUrl: String
-    var category: String
     var date: String
     var important: Bool
+    var category: Category
     var comments: [Comment]
     
     init?(withDictionary dictionary: JSONObject) {
@@ -27,7 +27,7 @@ struct NewsItem: Model {
             let imageUrl = dictionary["image"] as? String,
             let date = dictionary["date"] as? String,
             let important = dictionary["important"] as? Int,
-            let category = dictionary["category"] as? String,
+            let categoryId = dictionary["category"] as? Int,
             let commentsDictionary = dictionary["comments"] as? JSONArray
             else { return nil }
         
@@ -37,14 +37,14 @@ struct NewsItem: Model {
         self.imageUrl = imageUrl
         self.date = date
         self.important = (important == 1 ? true : false)
-        self.category = category
+        self.category = Category(rawValue: categoryId) ?? .all
+        
         comments = [Comment]()
         for commentJSON in commentsDictionary {
             if let comment = Comment(withDictionary: commentJSON) {
                 comments.append(comment)
             }
         }
-        
-        
     }
+    
 }

@@ -22,6 +22,10 @@
 		751185B71D974C39009436EE /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751185B61D974C39009436EE /* Resource.swift */; };
 		754A1FB61D99F58200BB23FF /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754A1FB51D99F58200BB23FF /* LoadingView.swift */; };
 		75620E611DB2898B00779994 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75620E601DB2898B00779994 /* VideoViewController.swift */; };
+		756BC0271DB968DA00866663 /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756BC0261DB968DA00866663 /* CommentsViewController.swift */; };
+		756BC02A1DB96A3C00866663 /* Comments.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 756BC0281DB96A3C00866663 /* Comments.storyboard */; };
+		756BC02C1DB96BFC00866663 /* CommentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756BC02B1DB96BFC00866663 /* CommentsTableViewCell.swift */; };
+		756BC02E1DB97FCD00866663 /* PostCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756BC02D1DB97FCD00866663 /* PostCommentViewController.swift */; };
 		7581328E1DB02F2200D13330 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7581328D1DB02F2200D13330 /* MainNavigationController.swift */; };
 		759A566C1D9ECD2D00972AA5 /* NewsDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759A566B1D9ECD2D00972AA5 /* NewsDetailsViewController.swift */; };
 		75B4C43E1D95EC7B005E500B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B4C43D1D95EC7B005E500B /* AppDelegate.swift */; };
@@ -89,6 +93,10 @@
 		751185B61D974C39009436EE /* Resource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		754A1FB51D99F58200BB23FF /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		75620E601DB2898B00779994 /* VideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		756BC0261DB968DA00866663 /* CommentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
+		756BC0291DB96A3C00866663 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Comments.storyboard; sourceTree = "<group>"; };
+		756BC02B1DB96BFC00866663 /* CommentsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsTableViewCell.swift; sourceTree = "<group>"; };
+		756BC02D1DB97FCD00866663 /* PostCommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCommentViewController.swift; sourceTree = "<group>"; };
 		7581328D1DB02F2200D13330 /* MainNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		7599C0821DB1382E006E457D /* TheArtball-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TheArtball-Bridging-Header.h"; sourceTree = "<group>"; };
 		759A566B1D9ECD2D00972AA5 /* NewsDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsDetailsViewController.swift; sourceTree = "<group>"; };
@@ -185,6 +193,7 @@
 				75B4C4411D95EC7B005E500B /* Main.storyboard */,
 				751185A91D969908009436EE /* Articles.storyboard */,
 				751185A61D9684CE009436EE /* News.storyboard */,
+				756BC0281DB96A3C00866663 /* Comments.storyboard */,
 				75EBEC0F1D99974300535B17 /* Base.storyboard */,
 				7511859F1D968402009436EE /* Storyboard.swift */,
 			);
@@ -210,6 +219,15 @@
 				751185B61D974C39009436EE /* Resource.swift */,
 			);
 			name = API;
+			sourceTree = "<group>";
+		};
+		756BC0251DB968A900866663 /* Comments */ = {
+			isa = PBXGroup;
+			children = (
+				756BC0261DB968DA00866663 /* CommentsViewController.swift */,
+				756BC02D1DB97FCD00866663 /* PostCommentViewController.swift */,
+			);
+			name = Comments;
 			sourceTree = "<group>";
 		};
 		75B4C4311D95EC7A005E500B = {
@@ -288,6 +306,7 @@
 		75B4C4741D95F3AA005E500B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				756BC0251DB968A900866663 /* Comments */,
 				75EBEC0E1D99964900535B17 /* Base */,
 				751185961D9681C8009436EE /* Articles */,
 				75B4C4781D95F3FA005E500B /* News */,
@@ -316,6 +335,7 @@
 			isa = PBXGroup;
 			children = (
 				751185991D968261009436EE /* ArticlesTableViewCell.swift */,
+				756BC02B1DB96BFC00866663 /* CommentsTableViewCell.swift */,
 			);
 			name = TableViewCells;
 			sourceTree = "<group>";
@@ -506,6 +526,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				756BC02A1DB96A3C00866663 /* Comments.storyboard in Resources */,
 				75B4C4481D95EC7B005E500B /* LaunchScreen.storyboard in Resources */,
 				75EBEC101D99974300535B17 /* Base.storyboard in Resources */,
 				75EBEC1A1D99A48300535B17 /* StatusView.xib in Resources */,
@@ -662,6 +683,7 @@
 			files = (
 				751185A01D968402009436EE /* Storyboard.swift in Sources */,
 				751185981D9681DC009436EE /* ArticlesTableViewController.swift in Sources */,
+				756BC0271DB968DA00866663 /* CommentsViewController.swift in Sources */,
 				75B4C4801D95F5EE005E500B /* NewsMainViewController.swift in Sources */,
 				75EBEC131D9998A800535B17 /* BaseTableViewController.swift in Sources */,
 				75EDAEB01D99D810009C76A7 /* BaseCollectionViewController.swift in Sources */,
@@ -671,6 +693,7 @@
 				75B4C47C1D95F432005E500B /* NewsPageViewController.swift in Sources */,
 				75D15D871D9AAB4300205361 /* ArticlesService.swift in Sources */,
 				751185B31D972938009436EE /* HTTPStatusCode.swift in Sources */,
+				756BC02E1DB97FCD00866663 /* PostCommentViewController.swift in Sources */,
 				751185B11D970654009436EE /* SessionManager.swift in Sources */,
 				75B4C47E1D95F581005E500B /* NewsCollectionViewCell.swift in Sources */,
 				754A1FB61D99F58200BB23FF /* LoadingView.swift in Sources */,
@@ -682,6 +705,7 @@
 				751185B51D974887009436EE /* NewsService.swift in Sources */,
 				7581328E1DB02F2200D13330 /* MainNavigationController.swift in Sources */,
 				75FCF0AC1D9C6EE10078D701 /* ErrorHelper.swift in Sources */,
+				756BC02C1DB96BFC00866663 /* CommentsTableViewCell.swift in Sources */,
 				75EBEC151D99A02C00535B17 /* StatusView.swift in Sources */,
 				75B4C46F1D95ED55005E500B /* NewsItem.swift in Sources */,
 				75FA68F61D989DC3000A737E /* ViewControllerID.swift in Sources */,
@@ -741,6 +765,14 @@
 				751185AA1D969908009436EE /* Base */,
 			);
 			name = Articles.storyboard;
+			sourceTree = "<group>";
+		};
+		756BC0281DB96A3C00866663 /* Comments.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				756BC0291DB96A3C00866663 /* Base */,
+			);
+			name = Comments.storyboard;
 			sourceTree = "<group>";
 		};
 		75B4C4411D95EC7B005E500B /* Main.storyboard */ = {

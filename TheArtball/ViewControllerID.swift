@@ -12,5 +12,7 @@ struct ViewControllerID {
     
     static let kNewsCollectionViewController = "NewsCollectionViewController"
     static let kNewsPageViewController = "NewsPageViewController"
+    static let kCommentsViewController = "CommentsViewController"
+    static let kVideoViewController = "VideoViewController"
     
 }

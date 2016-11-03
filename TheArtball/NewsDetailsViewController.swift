@@ -35,19 +35,41 @@ class NewsDetailsViewController: UIViewController, UIScrollViewDelegate, DTAttri
     @IBOutlet weak var topViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var topViewTopSpaceConstraint: NSLayoutConstraint!
     
+    
     var newsItem: NewsItem!
     
     // MARK: Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupNewsData()   
+        setupNewsData()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // MARK: IBActions
+    
+    @IBAction func commentsBarButtonPressed(_ sender: UIBarButtonItem) {
+        
+        self.performSegue(withIdentifier: "kNewsDetailsToComments", sender: self)
+        
+    }
+    
+    @IBAction func closeButtonPressed(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "kNewsDetailsToComments" {
+            if let commentsVC = segue.destination as? CommentsViewController {
+                commentsVC.comments = newsItem.comments
+            }
+        }
+    }
+    
     
     // MARK: Setup functions
     

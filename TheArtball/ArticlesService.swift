@@ -14,9 +14,7 @@ struct ArticlesService {
     
     func getAllArticles(completionHandler: @escaping CompletionClosure) {
     
-        
         BaseService.get(resource: Resource.kArticles) { (error, response, responseData) in
-            
             var articles = [Article]()
             if let responseData = responseData as? JSONArray {
                 for responseArticle in responseData {

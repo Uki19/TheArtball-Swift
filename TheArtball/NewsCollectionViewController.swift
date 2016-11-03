@@ -44,7 +44,7 @@ class NewsCollectionViewController: BaseCollectionViewController, UICollectionVi
     
     func getNews() {
         let newsService = NewsService()
-        newsService.getAllNews() { (error, responseData) in
+        newsService.getNews(forCategory: category!) { (error, responseData) in
             DispatchQueue.main.async {
                 
                 if error == nil {
@@ -105,7 +105,7 @@ class NewsCollectionViewController: BaseCollectionViewController, UICollectionVi
         let cell = collectionView.cellForItem(at: indexPath)
         let newsItem = newsItems[indexPath.row]
         
-        if newsItem.category == "Videos" {
+        if newsItem.category == .video {
             performSegue(withIdentifier: "kHomeToVideoSegue", sender: cell)
         } else {
             performSegue(withIdentifier: "kHomeToNewsDetailsSegue", sender: cell)

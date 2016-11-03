@@ -10,21 +10,23 @@ import Foundation
 
 struct Article: Model {
     
-    var id: String
+    var id: Int
     var title: String
     var body: String
     var date: String
     var author: String
     var imageUrl: String
+    var comments: [Comment]
     
     init?(withDictionary dictionary: JSONObject) {
         
-        guard let id = dictionary["id"] as? String,
+        guard let id = dictionary["id"] as? Int,
             let title = dictionary["title"] as? String,
             let body = dictionary["content"] as? String,
             let author = dictionary["author"] as? String,
             let imageUrl = dictionary["image"] as? String,
-            let date = dictionary["date"] as? String
+            let date = dictionary["date"] as? String,
+            let commentsDict = dictionary["comments"] as? JSONArray
             else { return nil }
         
         self.id = id
@@ -33,6 +35,12 @@ struct Article: Model {
         self.author = author
         self.imageUrl = imageUrl
         self.date = date
+        comments = [Comment]()
+        for commentJSON in commentsDict {
+            if let comment = Comment(withDictionary: commentJSON) {
+                comments.append(comment)
+            }
+        }
     }
     
 }
