@@ -35,7 +35,6 @@ class NewsDetailsViewController: UIViewController, UIScrollViewDelegate, DTAttri
     @IBOutlet weak var topViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var topViewTopSpaceConstraint: NSLayoutConstraint!
     
-    
     var newsItem: NewsItem!
     
     // MARK: Lifecycle
@@ -43,6 +42,10 @@ class NewsDetailsViewController: UIViewController, UIScrollViewDelegate, DTAttri
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNewsData()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
     }
     
     override func didReceiveMemoryWarning() {
